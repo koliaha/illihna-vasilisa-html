@@ -1,35 +1,35 @@
+const sections = [
+  {
+    id: 1,
+    title: "Раздел 1",
+    tasks: [
+      { id: 1, description: "Задача 1", completed: false },
+      { id: 2, description: "Задача 2", completed: false },
+    ],
+  },
+  {
+    id: 2,
+    title: "Раздел 2",
+    tasks: [
+      { id: 3, description: "Задача 3", completed: false },
+      // Добавь другие Задачи по аналогии
+    ],
+  },
+  // Добавь другие разделы по аналогии
+];
 document.addEventListener("DOMContentLoaded", function () {
-  const sections = [
-    {
-      id: 1,
-      title: "Раздел 1",
-      tasks: [
-        { id: 1, description: "Задача 1", completed: false },
-        { id: 2, description: "Задача 2", completed: false },
-      ],
-    },
-    {
-      id: 2,
-      title: "Раздел 2",
-      tasks: [{ id: 3, description: "Задача 3", completed: false }],
-    },
-    // Добавить остальные разделы по аналогии
-  ];
-
   const taskTable = document.getElementById("taskTable");
   sections.forEach((section) => {
     const table = document.createElement("table");
     const thead = document.createElement("thead");
     const tbody = document.createElement("tbody");
 
-    // Заголовок
     const headerRow = document.createElement("tr");
     const header = document.createElement("th");
     header.textContent = section.title;
     headerRow.appendChild(header);
     thead.appendChild(headerRow);
 
-    // Задачи
     section.tasks.forEach((task) => {
       const row = document.createElement("tr");
       const cell = document.createElement("td");
@@ -54,10 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
 function showResults() {
   const resultsDiv = document.getElementById("results");
   resultsDiv.innerHTML = ""; // Очистить предыдущие результаты
-
-  const sections = [
-    // Повторите структуру секций здесь или найдите способ использовать общие данные
-  ];
 
   sections.forEach((section) => {
     const result = document.createElement("div");
