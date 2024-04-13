@@ -6,24 +6,87 @@
 button {
   outline: none;
 }
+/* Общие стили страницы */
+body,
+html {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Контейнер для всего содержимого */
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок страницы */
+.main-title {
+  color: #2c3e50;
+  text-align: center;
+  margin-top: 0;
+}
+
+/* Основной текст на странице */
+.main-text {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Стилизация таблицы */
 table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
 }
+
 th,
 td {
-  border: 1px solid black;
-  padding: 8px;
+  border: 1px solid #ccc;
+  padding: 10px;
   text-align: left;
+}
+
+th {
+  background-color: #eaeaea;
 }
 label{
     display: flex;
     justify-content: space-between;
 }
-.container{
-    max-width: 1300px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px;
+/* Чекбоксы внутри таблицы */
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Кнопки на странице */
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Стилизация блока с результатами */
+#results {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #ecf0f1;
+  border-left: 4px solid #3498db;
+  font-style: italic;
 }

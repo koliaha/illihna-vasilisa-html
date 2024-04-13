@@ -10,12 +10,39 @@ const sections = [
   {
     id: 2,
     title: "Раздел 2",
+    tasks: [{ id: 3, description: "Задача 3", completed: false }],
+  },
+  {
+    id: 3,
+    title: "Раздел 3",
     tasks: [
-      { id: 3, description: "Задача 3", completed: false },
-      // Добавь другие Задачи по аналогии
+      { id: 34, description: "Задача 34", completed: false },
+      { id: 31, description: "Задача 1234", completed: false },
+      { id: 32, description: "Задача 1234", completed: false },
+      { id: 33, description: "1234", completed: false },
+      { id: 34, description: "Задаdqча 4", completed: false },
+      { id: 35, description: "Задача dasd5", completed: false },
     ],
   },
-  // Добавь другие разделы по аналогии
+  {
+    id: 4,
+    title: "Раздел 4",
+    tasks: [{ id: 6, description: "Задача 6", completed: false }],
+  },
+  {
+    id: 5,
+    title: "Раздел 5",
+    tasks: [
+      { id: 7, description: "Задача 7", completed: false },
+      { id: 8, description: "Задача 8", completed: false },
+    ],
+  },
+  {
+    id: 6,
+    title: "Раздел 6",
+    tasks: [{ id: 9, description: "Задача 9", completed: false }],
+  },
+ 
 ];
 document.addEventListener("DOMContentLoaded", function () {
   const taskTable = document.getElementById("taskTable");
