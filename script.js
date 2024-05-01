@@ -851,13 +851,14 @@ function evaluateHighPriorityTasks() {
     highTasksCompleted += highTasks.filter((task) => task.completed).length;
     totalHighTasks += highTasks.length;
   });
-
   if (totalHighTasks > 0) {
     const highTasksCompletionRate = (highTasksCompleted / totalHighTasks) * 100;
-    if (highTasksCompletionRate >= 50) {
-      resultsDiv.innerHTML += `<div>Ваше ПО безопасно на повышенном уровне</div>`;
+    if (highTasksCompletionRate === 100) {
+      resultsDiv.innerHTML += `<div class="finalText high">Ваше ПО безопасно на повышенном уровне</div>`;
+    } else if (highTasksCompletionRate == 50) {
+      resultsDiv.innerHTML += `<div class="finalText medium">Ваше ПО безопасно на среднем уровне</div>`;
     } else {
-      resultsDiv.innerHTML += `<div>Ваше ПО безопасно на среднем уровне</div>`;
+      resultsDiv.innerHTML += `<div class="finalText low">Повышенные меры безопасности необходимо усилить</div>`;
     }
   }
 }

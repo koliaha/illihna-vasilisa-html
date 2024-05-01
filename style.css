@@ -108,3 +108,16 @@ button:hover {
   bottom: 0;
   left: 0;
 }
+.finalText{
+  text-align: center;
+  font-weight: bold;
+}
+.high{
+  color:green
+}
+.medium{
+  color:orange
+}
+.low{
+  color:red
+}
