@@ -837,7 +837,7 @@ function showResults() {
   if (!allBaseCompleted) {
     resultsDiv.innerHTML += `<div>Ваше ПО недостаточно безопасно</div>`;
   } else {
-    resultsDiv.innerHTML += `<div>Ваше ПО безопасно на достаточном уровне</div>`;
+    // resultsDiv.innerHTML += `<div>Ваше ПО безопасно на достаточном уровне</div>`;
     evaluateHighPriorityTasks();
   }
 }
@@ -854,13 +854,12 @@ function evaluateHighPriorityTasks() {
 
   if (totalHighTasks > 0) {
     const highTasksCompletionRate = (highTasksCompleted / totalHighTasks) * 100;
-    if (highTasksCompletionRate > 50) {
+    if (highTasksCompletionRate > 99) {
       resultsDiv.innerHTML += `<div class="finalText high">Ваше ПО безопасно на повышенном уровне</div>`;
-    } else if (highTasksCompletionRate <= 50 && highTasksCompletionRate >= 40) {
+    } else if (highTasksCompletionRate >= 50 && highTasksCompletionRate <= 99) {
       resultsDiv.innerHTML += `<div class="finalText medium">Ваше ПО безопасно на среднем уровне</div>`;
     } else {
-		return
-    //   resultsDiv.innerHTML += `<div class="">Ваше ПО безопасно на достаточном уровне</div>`;
+      resultsDiv.innerHTML += `<div class="">Ваше ПО безопасно на достаточном уровне</div>`;
     }
   }
 }
