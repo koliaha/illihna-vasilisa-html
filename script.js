@@ -816,28 +816,43 @@ document.addEventListener("DOMContentLoaded", function () {
 	resultsDiv.innerHTML = ""; // Clear previous results
   
 	let allBaseCompleted = true;
+	let totalBaseTasks = 0;
+	let completedBaseTasksCount = 0;
+  
+	// Check base tasks across all sections
+	sections.forEach((section) => {
+	  const baseTasks = section.tasks.filter(task => task.isBase);
+	  const completedBaseTasks = baseTasks.filter(task => task.completed);
+	  totalBaseTasks += baseTasks.length;
+	  completedBaseTasksCount += completedBaseTasks.length;
+  
+	  if (baseTasks.length > 0 && completedBaseTasks.length !== baseTasks.length) {
+		allBaseCompleted = false;
+		const uncompletedBaseCount = baseTasks.length - completedBaseTasks.length;
+		if (uncompletedBaseCount > 0) {
+		  resultsDiv.innerHTML += `<div>В разделе "${section.title}" недостаточно выполнено базовых задач: ${uncompletedBaseCount} из ${baseTasks.length}</div>`;
+		}
+	  }
+	});
+  
+	if (!allBaseCompleted) {
+	  resultsDiv.innerHTML += `<div>Ваше ПО недостаточно безопасно</div>`;
+	} else {
+	  resultsDiv.innerHTML += `<div>Ваше ПО безопасно на достаточном уровне</div>`;
+	  // Proceed to check high priority tasks only if all base tasks are completed
+	  evaluateHighPriorityTasks();
+	}
+  }
+  
+  function evaluateHighPriorityTasks() {
 	let highTasksCompleted = 0;
 	let totalHighTasks = 0;
   
 	sections.forEach((section) => {
-	  const baseTasks = section.tasks.filter(task => task.isBase);
-	  const completedBaseTasks = baseTasks.filter(task => task.completed).length;
-	  if (baseTasks.length > 0 && completedBaseTasks !== baseTasks.length) {
-		allBaseCompleted = false;
-		const uncompletedBaseCount = baseTasks.length - completedBaseTasks;
-		resultsDiv.innerHTML += `<div>В разделе "${section.title}" недостаточно выполнено базовых задач: ${uncompletedBaseCount} из ${baseTasks.length}</div>`;
-	  }
-  
 	  const highTasks = section.tasks.filter(task => task.isHigh);
 	  highTasksCompleted += highTasks.filter(task => task.completed).length;
 	  totalHighTasks += highTasks.length;
 	});
-  
-	if (allBaseCompleted) {
-	  resultsDiv.innerHTML += `<div>Ваше ПО безопасно на достаточном уровне</div>`;
-	} else {
-	  resultsDiv.innerHTML += `<div>Базовые меры безопасности не выполнены полностью</div>`;
-	}
   
 	if (totalHighTasks > 0) {
 	  const highTasksCompletionRate = (highTasksCompleted / totalHighTasks) * 100;
