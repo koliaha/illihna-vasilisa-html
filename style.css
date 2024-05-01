@@ -92,10 +92,10 @@ button:hover {
   font-style: italic;
 }
 .isBase {
-  background-color: #81ecec;
+  background-color: #d5f1f1;
 }
 .isHigh {
-  background-color: #a29bfe;
+  background-color: #d6d5f1;
 }
 .resultWrapper {
   background-color: white;
