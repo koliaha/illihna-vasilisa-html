@@ -57,6 +57,12 @@ td {
 
 th {
   background-color: #eaeaea;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+th button{
+  margin: 0;
 }
 label {
   display: flex;
@@ -108,17 +114,44 @@ button:hover {
   bottom: 0;
   left: 0;
 }
-.finalText{
+.finalText {
   text-align: center;
   font-weight: bold;
   margin: 10px 0;
 }
-.high{
-  color:green
+.high {
+  color: green;
 }
-.medium{
-  color:orange
+.medium {
+  color: orange;
 }
-.low{
-  color:red
+.low {
+  color: red;
+}
+.buttonBase {
+  background-color: #d5f1f1;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 13px;
+}
+.buttonHigh {
+  background-color: #d6d5f1;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 13px;
+}
+.actionBtn{
+  display: flex;
+  gap: 10px;
+}
+@media screen and (max-width: 568px) {
+  .actionBtn{
+   flex-direction: column;
+   gap: 5px;
+  }
+  th button{
+    padding: 5px;
+  }
 }
