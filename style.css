@@ -15,7 +15,13 @@ html {
   background-color: #f4f4f9;
   color: #333;
 }
-
+table {
+  position: relative;
+}
+thead {
+  position: sticky;
+  top: 0;
+}
 /* Контейнер для всего содержимого */
 .container {
   max-width: 900px;
@@ -61,7 +67,7 @@ th {
   justify-content: space-between;
   align-items: center;
 }
-th button{
+th button {
   margin: 0;
 }
 label {
@@ -96,6 +102,7 @@ button:hover {
   background-color: #ecf0f1;
   border-left: 4px solid #3498db;
   font-style: italic;
+  display: none;
 }
 .isBase {
   background-color: #d5f1f1;
@@ -142,16 +149,25 @@ button:hover {
   border-radius: 10px;
   font-size: 13px;
 }
-.actionBtn{
+.actionBtn,
+.resultWrapper-btn {
   display: flex;
   gap: 10px;
 }
+.resultWrapper-btn {
+  justify-content: space-between;
+}
+#closeResultsBtn {
+  background-color: rgb(255, 71, 71);
+}
 @media screen and (max-width: 568px) {
-  .actionBtn{
-   flex-direction: column;
-   gap: 5px;
+  .actionBtn {
+    flex-direction: column;
+    gap: 5px;
   }
-  th button{
+
+  th button {
     padding: 5px;
+    min-width: 100px;
   }
 }

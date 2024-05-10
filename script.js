@@ -781,13 +781,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const title = document.createTextNode(section.title);
     header.appendChild(title);
     const actionBtnDiv = document.createElement("div");
-    actionBtnDiv.className = 'actionBtn';
+    actionBtnDiv.className = "actionBtn";
     // Button to toggle all base tasks completed status
     const baseButton = document.createElement("button");
     baseButton.textContent = "Выделить все";
     baseButton.classList.add("buttonBase");
     baseButton.onclick = () => {
-      section.tasks.forEach(task => {
+      section.tasks.forEach((task) => {
         if (task.isBase) {
           task.completed = !task.completed; // Toggle the completed status
           updateTaskUI(task.id, task.completed);
@@ -800,7 +800,7 @@ document.addEventListener("DOMContentLoaded", function () {
     highButton.textContent = "Выделить все";
     highButton.classList.add("buttonHigh");
     highButton.onclick = () => {
-      section.tasks.forEach(task => {
+      section.tasks.forEach((task) => {
         if (task.isHigh) {
           task.completed = !task.completed; // Toggle the completed status
           updateTaskUI(task.id, task.completed);
@@ -832,7 +832,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const checkbox = document.createElement("input");
       checkbox.type = "checkbox";
       checkbox.checked = task.completed;
-      checkbox.id = 'task-' + task.id;
+      checkbox.id = "task-" + task.id;
       checkbox.onchange = () => {
         task.completed = checkbox.checked;
       };
@@ -851,46 +851,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to update the checkbox UI
   function updateTaskUI(taskId, completed) {
-    const checkbox = document.getElementById('task-' + taskId);
+    const checkbox = document.getElementById("task-" + taskId);
     if (checkbox) {
       checkbox.checked = completed;
     }
   }
 });
-
-
-let resultsDiv = document.getElementById("results");
-function showResults() {
-  resultsDiv.innerHTML = ""; // Clear previous results
-
-  let allBaseCompleted = true;
-  let totalBaseTasks = 0;
-  let completedBaseTasksCount = 0;
-
-  // Check base tasks across all sections
-  sections.forEach((section) => {
-    const baseTasks = section.tasks.filter((task) => task.isBase);
-    const completedBaseTasks = baseTasks.filter((task) => task.completed);
-    totalBaseTasks += baseTasks.length;
-    completedBaseTasksCount += completedBaseTasks.length;
-
-    if (
-      baseTasks.length > 0 &&
-      completedBaseTasks.length !== baseTasks.length
-    ) {
-      allBaseCompleted = false;
-      const uncompletedBaseCount = baseTasks.length - completedBaseTasks.length;
-      resultsDiv.innerHTML += `<div>В разделе "${section.title}" выполнено базовых задач: ${completedBaseTasks.length} из ${baseTasks.length} (Осталось ${uncompletedBaseCount} задач)</div>`;
-    }
-  });
-
-  if (!allBaseCompleted) {
-    resultsDiv.innerHTML += `<div>Ваше ПО недостаточно безопасно</div>`;
-  } else {
-    // resultsDiv.innerHTML += `<div>Ваше ПО безопасно на достаточном уровне</div>`;
-    evaluateHighPriorityTasks();
-  }
-}
 
 function evaluateHighPriorityTasks() {
   let highTasksCompleted = 0;
@@ -913,3 +879,27 @@ function evaluateHighPriorityTasks() {
     }
   }
 }
+document.addEventListener("DOMContentLoaded", function () {
+  const showResultsBtn = document.getElementById("showResultsBtn");
+  const closeResultsBtn = document.getElementById("closeResultsBtn");
+  const resultsDiv = document.getElementById("results");
+  closeResultsBtn.style.display = "none";
+  showResultsBtn.addEventListener("click", function () {
+    resultsDiv.innerHTML = ""; // Clear previous results
+    console.log("asdasd");
+    sections.forEach((section) => {
+      const result = document.createElement("div");
+      const completedTasks = section.tasks.filter(
+        (task) => task.completed
+      ).length;
+      result.textContent = `${section.title}: ${completedTasks} из ${section.tasks.length} задач выполнены`;
+      resultsDiv.appendChild(result);
+    });
+    closeResultsBtn.style.display = "block";
+    resultsDiv.style.display = "block"; // Make the results visible
+  });
+  closeResultsBtn.addEventListener("click", function () {
+    resultsDiv.style.display = "none"; // Hide the results div
+    closeResultsBtn.style.display = "none"; // Hide the close button when results are not visible
+  });
+});
