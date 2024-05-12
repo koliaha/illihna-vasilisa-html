@@ -378,7 +378,7 @@ const sections = [
           "Тестирование на проникновение ПО проведено в автоматизированном режиме с использованием инструментальных средств",
         completed: false,
         isHigh: true,
-      }, //начиная с этого - повышенный
+      }, 
       {
         id: 413,
         description:
@@ -768,7 +768,6 @@ const sections = [
 ];
 document.addEventListener("DOMContentLoaded", function () {
   const taskTable = document.getElementById("taskTable");
-
   sections.forEach((section) => {
     const table = document.createElement("table");
     const thead = document.createElement("thead");
@@ -776,33 +775,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const headerRow = document.createElement("tr");
     const header = document.createElement("th");
-
-    // Create and append header title
     const title = document.createTextNode(section.title);
     header.appendChild(title);
     const actionBtnDiv = document.createElement("div");
     actionBtnDiv.className = "actionBtn";
-    // Button to toggle all base tasks completed status
+
     const baseButton = document.createElement("button");
-    baseButton.textContent = "Выделить все";
+    baseButton.textContent = "Выделить все базовые";
     baseButton.classList.add("buttonBase");
     baseButton.onclick = () => {
       section.tasks.forEach((task) => {
         if (task.isBase) {
-          task.completed = !task.completed; // Toggle the completed status
+          task.completed = !task.completed;
           updateTaskUI(task.id, task.completed);
         }
       });
     };
 
-    // Button to toggle all high priority tasks completed status
     const highButton = document.createElement("button");
-    highButton.textContent = "Выделить все";
+    highButton.textContent = "Выделить все высокие";
     highButton.classList.add("buttonHigh");
     highButton.onclick = () => {
       section.tasks.forEach((task) => {
         if (task.isHigh) {
-          task.completed = !task.completed; // Toggle the completed status
+          task.completed = !task.completed;
           updateTaskUI(task.id, task.completed);
         }
       });
@@ -810,24 +806,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
     actionBtnDiv.appendChild(baseButton);
     actionBtnDiv.appendChild(highButton);
-
-    // Append actionBtnDiv to header
     header.appendChild(actionBtnDiv);
     headerRow.appendChild(header);
     thead.appendChild(headerRow);
 
-    section.tasks.forEach((task) => {
+    let previousTaskType = null; 
+    section.tasks.forEach((task, index) => {
+      if (index === 0 || (previousTaskType === 'isBase' && task.isHigh) || (previousTaskType === 'isHigh' && task.isBase)) {
+        const typeChangeRow = document.createElement("tr");
+        const typeChangeCell = document.createElement("td");
+        typeChangeCell.textContent = task.isHigh ? "Повышенный:" : "Базовый:";
+        typeChangeRow.appendChild(typeChangeCell);
+        tbody.appendChild(typeChangeRow);
+      }
+
       const row = document.createElement("tr");
       const cell = document.createElement("td");
-
-      // Add respective class based on task type
       if (task.isBase) {
         cell.classList.add("isBase");
+        previousTaskType = 'isBase';
       }
       if (task.isHigh) {
         cell.classList.add("isHigh");
+        previousTaskType = 'isHigh';
       }
-
       const label = document.createElement("label");
       const checkbox = document.createElement("input");
       checkbox.type = "checkbox";
@@ -836,7 +838,6 @@ document.addEventListener("DOMContentLoaded", function () {
       checkbox.onchange = () => {
         task.completed = checkbox.checked;
       };
-
       label.appendChild(document.createTextNode(task.description));
       label.appendChild(checkbox);
       cell.appendChild(label);
@@ -849,7 +850,6 @@ document.addEventListener("DOMContentLoaded", function () {
     taskTable.appendChild(table);
   });
 
-  // Function to update the checkbox UI
   function updateTaskUI(taskId, completed) {
     const checkbox = document.getElementById("task-" + taskId);
     if (checkbox) {
@@ -858,48 +858,73 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+const resultsDiv = document.getElementById("results");
+
 function evaluateHighPriorityTasks() {
   let highTasksCompleted = 0;
   let totalHighTasks = 0;
-  console.log("asdad");
+  let baseTasksCompleted = 0;
+  let totalBaseTasks = 0;
+
   sections.forEach((section) => {
     const highTasks = section.tasks.filter((task) => task.isHigh);
+    const baseTasks = section.tasks.filter((task) => task.isBase);
     highTasksCompleted += highTasks.filter((task) => task.completed).length;
     totalHighTasks += highTasks.length;
+    baseTasksCompleted += baseTasks.filter((task) => task.completed).length;
+    totalBaseTasks += baseTasks.length;
   });
 
-  if (totalHighTasks > 0) {
-    const highTasksCompletionRate = (highTasksCompleted / totalHighTasks) * 100;
-    if (highTasksCompletionRate > 99) {
-      resultsDiv.innerHTML += `<div class="finalText high">Ваше ПО безопасно на повышенном уровне</div>`;
-    } else if (highTasksCompletionRate >= 50 && highTasksCompletionRate <= 99) {
-      resultsDiv.innerHTML += `<div class="finalText medium">Ваше ПО безопасно на среднем уровне</div>`;
-    } else {
-      resultsDiv.innerHTML += `<div class="">Ваше ПО безопасно на достаточном уровне</div>`;
-    }
+  const highTasksCompletionRate = totalHighTasks > 0 ? (highTasksCompleted / totalHighTasks) * 100 : 0;
+  let securityLevelText = `<div class="">Ваше ПО безопасно на достаточном уровне</div>`;
+  if (highTasksCompletionRate > 99) {
+    securityLevelText = `<div class="finalText high">Ваше ПО безопасно на повышенном уровне</div>`;
+  } else if (highTasksCompletionRate >= 50) {
+    securityLevelText = `<div class="finalText medium">Ваше ПО безопасно на среднем уровне</div>`;
   }
+  resultsDiv.innerHTML += securityLevelText;
 }
+
 document.addEventListener("DOMContentLoaded", function () {
   const showResultsBtn = document.getElementById("showResultsBtn");
   const closeResultsBtn = document.getElementById("closeResultsBtn");
   const resultsDiv = document.getElementById("results");
   closeResultsBtn.style.display = "none";
+
   showResultsBtn.addEventListener("click", function () {
     resultsDiv.innerHTML = ""; // Clear previous results
-    console.log("asdasd");
     sections.forEach((section) => {
       const result = document.createElement("div");
-      const completedTasks = section.tasks.filter(
-        (task) => task.completed
-      ).length;
+      const completedTasks = section.tasks.filter((task) => task.completed).length;
       result.textContent = `${section.title}: ${completedTasks} из ${section.tasks.length} задач выполнены`;
       resultsDiv.appendChild(result);
+
+      // Calculate and display remaining tasks for base and high categories
+      const remainingBase = section.tasks.filter((task) => task.isBase && !task.completed).length;
+      const remainingHigh = section.tasks.filter((task) => task.isHigh && !task.completed).length;
+      if (remainingBase > 0) {
+        const baseText = document.createElement("div");
+        baseText.textContent = `Осталось выполнить базовых задач: ${remainingBase}`;
+        result.appendChild(baseText);
+      }
+      if (remainingHigh > 0) {
+        const highText = document.createElement("div");
+        highText.textContent = `Осталось выполнить повышенных задач: ${remainingHigh}`;
+        result.appendChild(highText);
+      }
     });
+    
+    // Evaluate overall high priority task completion
+    evaluateHighPriorityTasks();
+
+    resultsDiv.style.display = "block";
     closeResultsBtn.style.display = "block";
-    resultsDiv.style.display = "block"; // Make the results visible
   });
+
   closeResultsBtn.addEventListener("click", function () {
-    resultsDiv.style.display = "none"; // Hide the results div
-    closeResultsBtn.style.display = "none"; // Hide the close button when results are not visible
+    resultsDiv.style.display = "none";
+    closeResultsBtn.style.display = "none";
   });
 });
+
+
