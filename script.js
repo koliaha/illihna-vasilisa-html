@@ -378,7 +378,7 @@ const sections = [
           "Тестирование на проникновение ПО проведено в автоматизированном режиме с использованием инструментальных средств",
         completed: false,
         isHigh: true,
-      }, 
+      },
       {
         id: 413,
         description:
@@ -810,9 +810,13 @@ document.addEventListener("DOMContentLoaded", function () {
     headerRow.appendChild(header);
     thead.appendChild(headerRow);
 
-    let previousTaskType = null; 
+    let previousTaskType = null;
     section.tasks.forEach((task, index) => {
-      if (index === 0 || (previousTaskType === 'isBase' && task.isHigh) || (previousTaskType === 'isHigh' && task.isBase)) {
+      if (
+        index === 0 ||
+        (previousTaskType === "isBase" && task.isHigh) ||
+        (previousTaskType === "isHigh" && task.isBase)
+      ) {
         const typeChangeRow = document.createElement("tr");
         const typeChangeCell = document.createElement("td");
         typeChangeCell.textContent = task.isHigh ? "Повышенный:" : "Базовый:";
@@ -824,11 +828,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const cell = document.createElement("td");
       if (task.isBase) {
         cell.classList.add("isBase");
-        previousTaskType = 'isBase';
+        previousTaskType = "isBase";
       }
       if (task.isHigh) {
         cell.classList.add("isHigh");
-        previousTaskType = 'isHigh';
+        previousTaskType = "isHigh";
       }
       const label = document.createElement("label");
       const checkbox = document.createElement("input");
@@ -856,6 +860,28 @@ document.addEventListener("DOMContentLoaded", function () {
       checkbox.checked = completed;
     }
   }
+  document
+  .getElementById("downloadResultsBtn")
+  .addEventListener("click", function () {
+      let csvContent = "data:text/csv;charset=utf-8,\uFEFF"; 
+      sections.forEach((section) => {
+          csvContent += `"${section.title}"\n`;
+          section.tasks.forEach((task) => {
+              csvContent += `"${task.description}";"${task.completed ? "Выполнено" : "Не выполнено"}"\n`;
+          });
+          csvContent += "\n";
+      });
+      const results = document.getElementById("results").innerText;
+      csvContent += `"Результаты"\n"${results.replace(/\n/g, ' ').replace(/"/g, '""')}"\n`;
+
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", "tasks_report.csv");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+  });
 });
 
 const resultsDiv = document.getElementById("results");
@@ -875,7 +901,8 @@ function evaluateHighPriorityTasks() {
     totalBaseTasks += baseTasks.length;
   });
 
-  const highTasksCompletionRate = totalHighTasks > 0 ? (highTasksCompleted / totalHighTasks) * 100 : 0;
+  const highTasksCompletionRate =
+    totalHighTasks > 0 ? (highTasksCompleted / totalHighTasks) * 100 : 0;
   let securityLevelText = `<div class="">Ваше ПО безопасно на достаточном уровне</div>`;
   if (highTasksCompletionRate > 99) {
     securityLevelText = `<div class="finalText high">Ваше ПО безопасно на повышенном уровне</div>`;
@@ -888,20 +915,28 @@ function evaluateHighPriorityTasks() {
 document.addEventListener("DOMContentLoaded", function () {
   const showResultsBtn = document.getElementById("showResultsBtn");
   const closeResultsBtn = document.getElementById("closeResultsBtn");
+  const downloadResultsBtn = document.getElementById("downloadResultsBtn");
   const resultsDiv = document.getElementById("results");
   closeResultsBtn.style.display = "none";
+  downloadResultsBtn.style.display = "none";
 
   showResultsBtn.addEventListener("click", function () {
     resultsDiv.innerHTML = ""; // Clear previous results
     sections.forEach((section) => {
       const result = document.createElement("div");
-      const completedTasks = section.tasks.filter((task) => task.completed).length;
+      const completedTasks = section.tasks.filter(
+        (task) => task.completed
+      ).length;
       result.textContent = `${section.title}: ${completedTasks} из ${section.tasks.length} задач выполнены`;
       resultsDiv.appendChild(result);
 
       // Calculate and display remaining tasks for base and high categories
-      const remainingBase = section.tasks.filter((task) => task.isBase && !task.completed).length;
-      const remainingHigh = section.tasks.filter((task) => task.isHigh && !task.completed).length;
+      const remainingBase = section.tasks.filter(
+        (task) => task.isBase && !task.completed
+      ).length;
+      const remainingHigh = section.tasks.filter(
+        (task) => task.isHigh && !task.completed
+      ).length;
       if (remainingBase > 0) {
         const baseText = document.createElement("div");
         baseText.textContent = `Осталось выполнить базовых задач: ${remainingBase}`;
@@ -913,12 +948,13 @@ document.addEventListener("DOMContentLoaded", function () {
         result.appendChild(highText);
       }
     });
-    
+
     // Evaluate overall high priority task completion
     evaluateHighPriorityTasks();
 
     resultsDiv.style.display = "block";
     closeResultsBtn.style.display = "block";
+    downloadResultsBtn.style.display = "block";
   });
 
   closeResultsBtn.addEventListener("click", function () {
@@ -926,5 +962,3 @@ document.addEventListener("DOMContentLoaded", function () {
     closeResultsBtn.style.display = "none";
   });
 });
-
-

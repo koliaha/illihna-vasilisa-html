@@ -160,6 +160,9 @@ button:hover {
 #closeResultsBtn {
   background-color: rgb(255, 71, 71);
 }
+#downloadResultsBtn {
+  background-color: rgb(0, 186, 12);
+}
 @media screen and (max-width: 568px) {
   .actionBtn {
     flex-direction: column;
