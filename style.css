@@ -174,17 +174,3 @@ button:hover {
     min-width: 100px;
   }
 }
-.section-color-1 {
-  background-color: #a29bfe; /* light red */
-}
-.section-color-2 {
-  background-color: #CCFFCC; /* light green */
-}
-.section-color-3 {
-  background-color: #CCCCFF; /* light blue */
-}
-.section-color-4 {
-  background-color: #fd79a8; /* light blue */
-}.section-color-5 {
-  background-color: #fab1a0; /* light blue */
-}

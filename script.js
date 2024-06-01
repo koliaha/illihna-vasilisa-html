@@ -84,7 +84,10 @@ const sections = [
     id: 3,
     title: "Разработка продукта",
     tasks: [
-      //Обучение сотрудников
+      {
+        id: 311,
+        title: "Обучение сотрудников:",
+      },
       {
         id: 30,
         description:
@@ -172,7 +175,11 @@ const sections = [
           "Осуществляется контроль качества программ обучения (курсов, тренингов и т.п.) независимым аудитором",
         completed: false,
       },
-      //Статический анализ и экспертиза исходного кода программного обеспечения
+      {
+        id: 312,
+        title:
+          "Статический анализ и экспертиза исходного кода программного обеспечения:",
+      },
       {
         id: 315,
         description:
@@ -304,7 +311,10 @@ const sections = [
     id: 5,
     title: "Внедрение и сопровождение",
     tasks: [
-      //Поставка программного обеспечения
+      {
+        id: 511,
+        title: "Поставка программного обеспечения:",
+      },
       {
         id: 50,
         description:
@@ -347,7 +357,10 @@ const sections = [
           "Организовывается оповещение пользователей о выпуске обновлений (включая обновления безопасности) и необходимости их установки",
         completed: false,
       },
-      //Решение проблем в процессе эксплуатации
+      {
+        id: 512,
+        title: "Решение проблем в процессе эксплуатации:",
+      },
       {
         id: 58,
         description: "Организована служба технической поддержки",
@@ -417,8 +430,10 @@ document.addEventListener("DOMContentLoaded", function () {
     baseButton.classList.add("buttonBase");
     baseButton.onclick = () => {
       section.tasks.forEach((task) => {
-        task.completed = !task.completed;
-        updateTaskUI(task.id, task.completed);
+        if (task.description) {
+          task.completed = !task.completed;
+          updateTaskUI(task.id, task.completed);
+        }
       });
     };
 
@@ -428,27 +443,39 @@ document.addEventListener("DOMContentLoaded", function () {
     thead.appendChild(headerRow);
 
     section.tasks.forEach((task) => {
-      const row = document.createElement("tr");
-      const cell = document.createElement("td");
-      const label = document.createElement("label");
-      const checkbox = document.createElement("input");
-      checkbox.type = "checkbox";
-      checkbox.checked = task.completed;
-      checkbox.id = "task-" + task.id;
-      checkbox.onchange = () => {
-        task.completed = checkbox.checked;
-      };
-      label.appendChild(document.createTextNode(task.description));
-      label.appendChild(checkbox);
-      cell.appendChild(label);
-      row.appendChild(cell);
-      tbody.appendChild(row);
+      if (task.title) {
+        const titleRow = document.createElement("tr");
+        const titleCell = document.createElement("td");
+        titleCell.colSpan = 2;
+        const titleText = document.createElement("strong");
+        titleText.textContent = task.title;
+        titleCell.appendChild(titleText);
+        titleRow.appendChild(titleCell);
+        tbody.appendChild(titleRow);
+      } else if (task.description) {
+        const row = document.createElement("tr");
+        const cell = document.createElement("td");
+        const label = document.createElement("label");
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.checked = task.completed;
+        checkbox.id = "task-" + task.id;
+        checkbox.onchange = () => {
+          task.completed = checkbox.checked;
+        };
+        label.appendChild(document.createTextNode(task.description));
+        label.appendChild(checkbox);
+        cell.appendChild(label);
+        row.appendChild(cell);
+        tbody.appendChild(row);
+      }
     });
 
     table.appendChild(thead);
     table.appendChild(tbody);
 
-    table.classList.add(`section-color-${(index % 5) + 1}`);
+    // Add class for background color
+    table.classList.add(`section-color-${(index % 6) + 1}`);
 
     taskTable.appendChild(table);
   });
@@ -459,6 +486,7 @@ document.addEventListener("DOMContentLoaded", function () {
       checkbox.checked = completed;
     }
   }
+
   document
     .getElementById("downloadResultsBtn")
     .addEventListener("click", function () {
@@ -518,10 +546,12 @@ function evaluateHighPriorityTasks() {
 document.addEventListener("DOMContentLoaded", function () {
   const showResultsBtn = document.getElementById("showResultsBtn");
   const closeResultsBtn = document.getElementById("closeResultsBtn");
+  const showInfoBtn = document.getElementById("showInfoBtn");
   const downloadResultsBtn = document.getElementById("downloadResultsBtn");
   const resultsDiv = document.getElementById("results");
   closeResultsBtn.style.display = "none";
   downloadResultsBtn.style.display = "none";
+  showInfoBtn.style.display = "none";
 
   showResultsBtn.addEventListener("click", function () {
     resultsDiv.innerHTML = ""; // Clear previous results
@@ -529,9 +559,11 @@ document.addEventListener("DOMContentLoaded", function () {
     let completedTasks = 0;
     sections.forEach((section) => {
       section.tasks.forEach((task) => {
-        totalTasks++;
-        if (task.completed) {
-          completedTasks++;
+        if (task.description) {
+          totalTasks++;
+          if (task.completed) {
+            completedTasks++;
+          }
         }
       });
     });
@@ -542,11 +574,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (completionRate >= 0 && completionRate <= 24) {
       securityLevel = "Ваше программное обеспечение небезопасно";
     } else if (completionRate >= 25 && completionRate <= 49) {
-      securityLevel = "Ваше программное обеспечение безопасно на начальном уровне";
+      securityLevel =
+        "Ваше программное обеспечение безопасно на начальном уровне";
     } else if (completionRate >= 50 && completionRate <= 74) {
-      securityLevel = "Ваше программное обеспечение безопасно на достаточном уровне";
+      securityLevel =
+        "Ваше программное обеспечение безопасно на достаточном уровне";
     } else if (completionRate >= 75 && completionRate <= 100) {
-      securityLevel = "Ваше программное обеспечение безопасно на повышенном уровне";
+      securityLevel =
+        "Ваше программное обеспечение безопасно на повышенном уровне";
     }
 
     const result = document.createElement("div");
@@ -556,6 +591,25 @@ document.addEventListener("DOMContentLoaded", function () {
     resultsDiv.style.display = "block";
     closeResultsBtn.style.display = "block";
     downloadResultsBtn.style.display = "block";
+    showInfoBtn.style.display = "block";
+  });
+
+  showInfoBtn.addEventListener("click", function () {
+    const infoDiv = document.getElementById("info");
+    if (infoDiv) {
+      infoDiv.innerHTML = ""; 
+    } else {
+      const newInfoDiv = document.createElement("div");
+      newInfoDiv.id = "info";
+      resultsDiv.appendChild(newInfoDiv);
+    }
+    sections.forEach((section) => {
+      const completedTasks = section.tasks.filter(task => task.completed && task.description).length;
+      const totalTasks = section.tasks.filter(task => task.description).length;
+      const sectionInfo = document.createElement("div");
+      sectionInfo.textContent = `${section.title}: ${completedTasks} из ${totalTasks} задач выполнены`;
+      document.getElementById("info").appendChild(sectionInfo);
+    });
   });
 
   closeResultsBtn.addEventListener("click", function () {
