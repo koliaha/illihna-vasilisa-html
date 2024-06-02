@@ -475,7 +475,7 @@ document.addEventListener("DOMContentLoaded", function () {
     table.appendChild(tbody);
 
     // Add class for background color
-    table.classList.add(`section-color-${(index % 6) + 1}`);
+    // table.classList.add(`section-color-${(index % 6) + 1}`);
 
     taskTable.appendChild(table);
   });
@@ -597,15 +597,19 @@ document.addEventListener("DOMContentLoaded", function () {
   showInfoBtn.addEventListener("click", function () {
     const infoDiv = document.getElementById("info");
     if (infoDiv) {
-      infoDiv.innerHTML = ""; 
+      infoDiv.innerHTML = "";
     } else {
       const newInfoDiv = document.createElement("div");
       newInfoDiv.id = "info";
       resultsDiv.appendChild(newInfoDiv);
     }
     sections.forEach((section) => {
-      const completedTasks = section.tasks.filter(task => task.completed && task.description).length;
-      const totalTasks = section.tasks.filter(task => task.description).length;
+      const completedTasks = section.tasks.filter(
+        (task) => task.completed && task.description
+      ).length;
+      const totalTasks = section.tasks.filter(
+        (task) => task.description
+      ).length;
       const sectionInfo = document.createElement("div");
       sectionInfo.textContent = `${section.title}: ${completedTasks} из ${totalTasks} задач выполнены`;
       document.getElementById("info").appendChild(sectionInfo);
