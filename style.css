@@ -173,4 +173,13 @@ button:hover {
     padding: 5px;
     min-width: 100px;
   }
+  .resultWrapper-btn {
+    flex-direction: column;
+  }
+  .resultWrapper-btn div{
+    justify-content: space-between;
+  }
+  .resultWrapper-btn button{
+    margin-top: 5px;
+  }
 }
