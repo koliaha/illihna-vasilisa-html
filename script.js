@@ -545,11 +545,11 @@ function evaluateHighPriorityTasks() {
 
 document.addEventListener("DOMContentLoaded", function () {
   const showResultsBtn = document.getElementById("showResultsBtn");
-  const closeResultsBtn = document.getElementById("closeResultsBtn");
+  // const closeResultsBtn = document.getElementById("closeResultsBtn");
   const showInfoBtn = document.getElementById("showInfoBtn");
   const downloadResultsBtn = document.getElementById("downloadResultsBtn");
   const resultsDiv = document.getElementById("results");
-  closeResultsBtn.style.display = "none";
+  // closeResultsBtn?.style.display = "none";
   downloadResultsBtn.style.display = "none";
   showInfoBtn.style.display = "none";
 
@@ -588,7 +588,7 @@ document.addEventListener("DOMContentLoaded", function () {
     resultsDiv.appendChild(result);
 
     resultsDiv.style.display = "block";
-    closeResultsBtn.style.display = "block";
+    // closeResultsBtn?.style.display = "block";
     downloadResultsBtn.style.display = "block";
     showInfoBtn.style.display = "block";
   });
@@ -615,8 +615,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  closeResultsBtn.addEventListener("click", function () {
-    resultsDiv.style.display = "none";
-    closeResultsBtn.style.display = "none";
-  });
+  // closeResultsBtn?.addEventListener("click", function () {
+  //   resultsDiv.style.display = "none";
+  //   closeResultsBtn?.style.display = "none";
+  // });
 });
