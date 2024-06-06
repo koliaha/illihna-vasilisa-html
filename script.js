@@ -494,9 +494,13 @@ document.addEventListener("DOMContentLoaded", function () {
       sections.forEach((section) => {
         csvContent += `"${section.title}"\n`;
         section.tasks.forEach((task) => {
-          csvContent += `"${task.description}";"${
-            task.completed ? "Выполнено" : "Не выполнено"
-          }"\n`;
+          if (task.title) {
+            csvContent += `"${task.title}"\n`;
+          } else {
+            csvContent += `"${task.description}";"${
+              task.completed ? "Выполнено" : "Не выполнено"
+            }"\n`;
+          }
         });
         csvContent += "\n";
       });
@@ -580,7 +584,8 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (completionRate > 74 && completionRate <= 94) {
       securityLevel = "У вас повышенный уровень выполнения мер";
     } else if (completionRate > 94 && completionRate <= 100) {
-      securityLevel = "У вас достаточный уровень выполнения мер, вы можете претендовать на сертификацию процессов безопасной разработки";
+      securityLevel =
+        "У вас достаточный уровень выполнения мер, вы можете претендовать на сертификацию процессов безопасной разработки";
     }
 
     const result = document.createElement("div");
