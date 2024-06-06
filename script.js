@@ -573,13 +573,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (completionRate >= 0 && completionRate <= 24) {
       securityLevel = "Процессы безопасной разработки не выстроены";
-    } else if (completionRate >= 25 && completionRate <= 49) {
+    } else if (completionRate > 24 && completionRate <= 49) {
       securityLevel = "У вас минимальный уровень выполнения мер";
-    } else if (completionRate >= 50 && completionRate <= 74) {
+    } else if (completionRate > 49 && completionRate <= 74) {
       securityLevel = "У вас средний уровень выполнения мер";
-    } else if (completionRate >= 75 && completionRate <= 94) {
+    } else if (completionRate > 74 && completionRate <= 94) {
       securityLevel = "У вас повышенный уровень выполнения мер";
-    } else if (completionRate >= 95 && completionRate <= 100) {
+    } else if (completionRate > 94 && completionRate <= 100) {
       securityLevel = "У вас достаточный уровень выполнения мер, вы можете претендовать на сертификацию процессов безопасной разработки";
     }
 
