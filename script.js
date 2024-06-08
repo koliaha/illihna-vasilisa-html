@@ -589,7 +589,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const result = document.createElement("div");
-    result.textContent = `${securityLevel} (${completedTasks} из ${totalTasks} задач выполнены)`;
+    result.textContent = `${securityLevel} (${completedTasks} из ${totalTasks} мер выполнены)`;
     resultsDiv.appendChild(result);
 
     resultsDiv.style.display = "block";
@@ -615,7 +615,7 @@ document.addEventListener("DOMContentLoaded", function () {
         (task) => task.description
       ).length;
       const sectionInfo = document.createElement("div");
-      sectionInfo.textContent = `${section.title}: ${completedTasks} из ${totalTasks} задач выполнены`;
+      sectionInfo.textContent = `${section.title}: ${completedTasks} из ${totalTasks} мер выполнены`;
       document.getElementById("info").appendChild(sectionInfo);
     });
   });
