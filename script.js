@@ -528,6 +528,7 @@ document.addEventListener("DOMContentLoaded", function () {
         checkbox.onchange = () => {
           task.completed = checkbox.checked;
         };
+        label.appendChild(document.createTextNode(task.level + "ур. - "));
         label.appendChild(document.createTextNode(task.description));
         label.appendChild(checkbox);
         cell.appendChild(label);
@@ -588,50 +589,58 @@ const resultsDiv = document.getElementById("results");
 
 document.addEventListener("DOMContentLoaded", function () {
   const showResultsBtn = document.getElementById("showResultsBtn");
-  // const closeResultsBtn = document.getElementById("closeResultsBtn");
   const showInfoBtn = document.getElementById("showInfoBtn");
   const downloadResultsBtn = document.getElementById("downloadResultsBtn");
   const resultsDiv = document.getElementById("results");
-  // closeResultsBtn?.style.display = "none";
-  downloadResultsBtn.style.display = "none";
-  showInfoBtn.style.display = "none";
+
   showResultsBtn.addEventListener("click", function () {
-    resultsDiv.innerHTML = ""; 
+    resultsDiv.innerHTML = "";
     let totalTasks = 0;
     let completedTasks = 0;
+    let totalLevel = 0;
+    let sumLevel1 = 0;
+    let sumLevel2 = 0;
+    let sumLevel3 = 0;
+    let sumCompletedLevels = 0;
+
     sections.forEach((section) => {
-      section.tasks.forEach((task) => {
-        if (task.description) {
-          totalTasks++;
-          if (task.completed) {
-            completedTasks++;
-          }
-        }
-      });
+        section.tasks.forEach((task) => {
+            if (task.description) {
+                totalTasks++;
+                totalLevel += task.level;
+                if (task.completed) {
+                    completedTasks++;
+                    sumCompletedLevels += task.level;
+                }
+                if (task.level === 1) sumLevel1 += task.level;
+                if (task.level === 2) sumLevel2 += task.level;
+                if (task.level === 3) sumLevel3 += task.level;
+            }
+        });
     });
 
     const completionRate = (completedTasks / totalTasks) * 100;
     let securityLevel = "";
 
-    if (completionRate >= 0 && completionRate <= 24) {
-      securityLevel = "Процессы безопасной разработки не выстроены";
-    } else if (completionRate > 24 && completionRate <= 49) {
-      securityLevel = "У вас минимальный уровень выполнения мер";
-    } else if (completionRate > 49 && completionRate <= 74) {
-      securityLevel = "У вас средний уровень выполнения мер";
-    } else if (completionRate > 74 && completionRate <= 94) {
-      securityLevel = "У вас повышенный уровень выполнения мер";
-    } else if (completionRate > 94 && completionRate <= 100) {
-      securityLevel =
-        "У вас достаточный уровень выполнения мер, вы можете претендовать на сертификацию процессов безопасной разработки";
+    const sumLevel1And2 = sumLevel1 + sumLevel2;
+    const sumAllLevels = sumLevel1 + sumLevel2 + sumLevel3;
+
+    if (sumCompletedLevels < sumLevel1) {
+        securityLevel = "Процессы безопасной разработки не выстроены";
+    } else if (sumCompletedLevels >= sumLevel1 && sumCompletedLevels < sumLevel1And2) {
+        securityLevel = "Достигнут 1 уровень безопасности программного обеспечения";
+    } else if (sumCompletedLevels >= sumLevel1And2 && sumCompletedLevels < sumAllLevels) {
+        securityLevel = "Достигнут 2 уровень безопасности программного обеспечения";
+    } else if (sumCompletedLevels === sumAllLevels) {
+        securityLevel = "Достигнут 3 уровень безопасности программного обеспечения, вы можете претендовать на сертификацию программного обеспечения";
     }
 
     const result = document.createElement("div");
-    result.textContent = `${securityLevel} (${completedTasks} из ${totalTasks} мер выполнены)`;
+    result.textContent = `сумма мер: ${sumCompletedLevels}, сумма 1ур: ${sumLevel1}, сумма 2ур: ${sumLevel2}, сумма 3ур: ${sumLevel3} `;
+    result.textContent += `${securityLevel} (${completedTasks} из ${totalTasks} мер выполнены)`;
     resultsDiv.appendChild(result);
 
     resultsDiv.style.display = "block";
-    // closeResultsBtn?.style.display = "block";
     downloadResultsBtn.style.display = "block";
     showInfoBtn.style.display = "block";
   });
