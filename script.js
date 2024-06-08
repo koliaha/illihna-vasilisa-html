@@ -2,7 +2,7 @@ const sections = [
   {
     id: 1,
     title: "Определение требований",
-    coefficient: 0.2,
+
     tasks: [
       {
         id: 10,
@@ -57,7 +57,7 @@ const sections = [
   {
     id: 2,
     title: "Проектирование архитектуры программного обеспечения",
-    coefficient: 0.2,
+
     tasks: [
       {
         id: 20,
@@ -101,7 +101,6 @@ const sections = [
       {
         id: 311,
         title: "Обучение сотрудников:",
-        coefficient: 0.2,
       },
       {
         id: 30,
@@ -209,7 +208,6 @@ const sections = [
         id: 312,
         title:
           "Статический анализ и экспертиза исходного кода программного обеспечения:",
-        coefficient: 0.2,
       },
       {
         id: 315,
@@ -293,7 +291,7 @@ const sections = [
   {
     id: 4,
     title: "Тестирование",
-    coefficient: 0.2,
+
     tasks: [
       {
         id: 40,
@@ -366,7 +364,6 @@ const sections = [
       {
         id: 511,
         title: "Поставка программного обеспечения:",
-        coefficient: 0.2,
       },
       {
         id: 50,
@@ -420,7 +417,6 @@ const sections = [
       {
         id: 512,
         title: "Решение проблем в процессе эксплуатации:",
-        coefficient: 0.2,
       },
       {
         id: 58,
