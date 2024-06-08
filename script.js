@@ -522,15 +522,22 @@ document.addEventListener("DOMContentLoaded", function () {
         const cell = document.createElement("td");
         const label = document.createElement("label");
         const checkbox = document.createElement("input");
+        const level = document.createElement("div");
+        const action = document.createElement("div");
+        action.classList.add("actionRow")
+        level.classList.add("level")
+        level.classList.add(`level-${task.level}`)
+        level.innerHTML = task.level;
         checkbox.type = "checkbox";
         checkbox.checked = task.completed;
         checkbox.id = "task-" + task.id;
         checkbox.onchange = () => {
           task.completed = checkbox.checked;
         };
-        label.appendChild(document.createTextNode(task.level + "ур. - "));
         label.appendChild(document.createTextNode(task.description));
-        label.appendChild(checkbox);
+        action.appendChild(level);
+        action.appendChild(checkbox);
+        label.appendChild(action);
         cell.appendChild(label);
         row.appendChild(cell);
         tbody.appendChild(row);

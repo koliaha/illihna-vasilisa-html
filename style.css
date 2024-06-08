@@ -73,10 +73,11 @@ th button {
 label {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
 /* Чекбоксы внутри таблицы */
 input[type="checkbox"] {
-  margin-right: 10px;
+  /* margin-right: 10px; */
 }
 
 /* Кнопки на странице */
@@ -121,6 +122,11 @@ button:hover {
   bottom: 0;
   left: 0;
 }
+.actionRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .finalText {
   text-align: center;
   font-weight: bold;
@@ -134,6 +140,25 @@ button:hover {
 }
 .low {
   color: red;
+}
+.level {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: #2980b9;
+}
+.level-1{
+  background-color: #db5151;
+}
+.level-2{
+  background-color: #fdcb6e;
+}
+.level-3{
+  background-color: #00b894;
 }
 .buttonBase {
   background-color: #d5f1f1;
@@ -168,7 +193,9 @@ button:hover {
     flex-direction: column;
     gap: 5px;
   }
-
+  .main-title {
+    font-size: 14px;
+  }
   th button {
     padding: 5px;
     min-width: 100px;
@@ -176,10 +203,10 @@ button:hover {
   .resultWrapper-btn {
     flex-direction: column;
   }
-  .resultWrapper-btn div{
+  .resultWrapper-btn div {
     justify-content: space-between;
   }
-  .resultWrapper-btn button{
+  .resultWrapper-btn button {
     margin-top: 5px;
   }
 }
