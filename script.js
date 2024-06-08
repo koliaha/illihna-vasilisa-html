@@ -14,14 +14,14 @@ const sections = [
       {
         id: 11,
         description: "Перечни прописаны в ТЗ",
-        level: 1,
+        level: 2,
         completed: false,
       },
       {
         id: 12,
         description:
           "В качестве источника формирования требований взяты: требования законов, нормативных правовых актов, отраслевых стандартов, перечень требований пользователя, сценарии применения программного обеспечения",
-        level: 1,
+        level: 3,
         completed: false,
       },
       {
@@ -35,14 +35,14 @@ const sections = [
         id: 14,
         description:
           "Соблюдена взаимная непротиворечивость набора требований, определяющих свойства безопасности программного обеспечения",
-        level: 1,
+        level: 3,
         completed: false,
       },
       {
         id: 15,
         description:
           "Соблюдена адекватность требований, определяющих свойства безопасности программного обеспечения",
-        level: 1,
+        level: 2,
         completed: false,
       },
       {
@@ -69,14 +69,14 @@ const sections = [
       {
         id: 21,
         description: "Разработана модель угроз программного обеспечения",
-        level: 1,
+        level: 2,
         completed: false,
       },
       {
         id: 22,
         description:
           "По результатам моделирования угроз и анализа поверхности атаки приоритизированы и устранены потенциальные уязвимости (угрозы безопасности) с учетом их критичности",
-        level: 1,
+        level: 3,
         completed: false,
       },
       {
@@ -89,7 +89,7 @@ const sections = [
       {
         id: 24,
         description: "Выполнено описание поверхности атаки",
-        level: 1,
+        level: 2,
         completed: false,
       },
     ],
@@ -112,27 +112,27 @@ const sections = [
       {
         id: 31,
         description: "Установлена периодичность обучения",
-        level: 1,
+        level: 2,
         completed: false,
       },
       {
         id: 32,
         description: "Определены критерии успешности прохождения обучения",
-        level: 1,
+        level: 3,
         completed: false,
       },
       {
         id: 33,
         description:
           "Определены навыки, требующиеся для каждого участника разработки",
-        level: 1,
+        level: 3,
         completed: false,
       },
       {
         id: 34,
         description:
           "Проводится обучение всех участников команды разработки, задействованных в разработке кода программного обеспечения",
-        level: 1,
+        level: 3,
         completed: false,
       },
       {
@@ -146,14 +146,14 @@ const sections = [
         id: 36,
         description:
           "Проводится повторное обучение сотрудников в случае получения ими неудовлетворительной оценки по результатам обучения",
-        level: 1,
+        level: 2,
         completed: false,
       },
       {
         id: 37,
         description:
           "Сотрудники отстраняются от возможности изменения кода программного обеспечения в случае получения ими неудовлетворительной оценки по результатам обучения",
-        level: 1,
+        level: 3,
         completed: false,
       },
       {
@@ -166,14 +166,14 @@ const sections = [
       {
         id: 39,
         description: "Проводится оценка эффективности программы обучения",
-        level: 1,
+        level: 2,
         completed: false,
       },
       {
         id: 310,
         description:
           "Проводится анализ существующих программ обучения с учетом потребностей сотрудников",
-        level: 1,
+        level: 2,
         completed: false,
       },
       {
@@ -187,7 +187,7 @@ const sections = [
         id: 312,
         description:
           "Проводится выборочная проверка качества обучения сотрудников",
-        level: 1,
+        level: 3,
         completed: false,
       },
       {
@@ -201,7 +201,7 @@ const sections = [
         id: 314,
         description:
           "Осуществляется контроль качества программ обучения (курсов, тренингов и т.п.) независимым аудитором",
-        level: 1,
+        level: 3,
         completed: false,
       },
       {
@@ -213,14 +213,14 @@ const sections = [
         id: 315,
         description:
           "Разработаны и утверждены регламентирующие документы по проведению статического анализа и экспертизы исходного кода программного обеспечения",
-        level: 1,
+        level: 3,
         completed: false,
       },
       {
         id: 316,
         description:
           "Определены инструменты статического анализа и экспертизы исходного кода для каждого используемого в программном обеспечении языка программирования",
-        level: 1,
+        level: 2,
         completed: false,
       },
       {
@@ -234,35 +234,35 @@ const sections = [
         id: 318,
         description:
           "Обрабатываются срабатывания статического анализатора в соответствии с правилами обработки ошибок, установленными в регламентирующих документах организации, с учетом типов и уровней критичности ошибок и особенностей инструментов статического анализа и экспертизы исходного кода программного обеспечения",
-        level: 1,
+        level: 3,
         completed: false,
       },
       {
         id: 319,
         description:
           "Определены параметры настройки инструментов статического анализа и экспертизы исходного кода программного обеспечения с учетом с рекомендаций подразделения обеспечения безопасности программного обеспечения",
-        level: 1,
+        level: 2,
         completed: false,
       },
       {
         id: 320,
         description:
           "Осуществляется пересмотр параметров настройки инструментов статического анализа и экспертизы исходного кода программного обеспечения с установленной периодичностью и при выполнении установленных событий (изменениях в правилах сборки, применяемых статических анализаторах, получении информации о потенциальных уязвимостях и т.п.)",
-        level: 1,
+        level: 3,
         completed: false,
       },
       {
         id: 321,
         description:
           "Проводится регулярный статический анализ и экспертиза исходного кода программного обеспечения в рамках жизненного цикла программного обеспечения",
-        level: 1,
+        level: 2,
         completed: false,
       },
       {
         id: 322,
         description:
           "Осуществляется контроль устранения выявленных потенциальных ошибок",
-        level: 1,
+        level: 3,
         completed: false,
       },
       {
@@ -276,14 +276,14 @@ const sections = [
         id: 324,
         description:
           "Проводится статический анализ и экспертизу исходного кода программного обеспечения всех заимствованных компонентов",
-        level: 1,
+        level: 2,
         completed: false,
       },
       {
         id: 325,
         description:
           "Проводится статический анализ и экспертиза исходного кода программного обеспечения неизменяемого исходного кода при выполнении установленных событий (изменениях в правилах сборки, применяемых статических анализаторах, получении информации о потенциальных уязвимостях и т.п.)",
-        level: 1,
+        level: 3,
         completed: false,
       },
     ],
@@ -297,7 +297,7 @@ const sections = [
         id: 40,
         description:
           "Разработан план тестирования, содержащий описание сценариев тестирования для каждой функциональной возможности программного обеспечения, включающее: формулировку функциональных требований, выполняемые действия по оценке, ожидаемые результаты тестирования и критерии успешного прохождения проверок",
-        level: 1,
+        level: 3,
         completed: false,
       },
       {
@@ -318,28 +318,28 @@ const sections = [
         id: 43,
         description:
           "Регистрируется и организовывается процесс исправления ошибок, выявленных в ходе тестирования",
-        level: 1,
+        level: 3,
         completed: false,
       },
       {
         id: 44,
         description:
           "Регистрируется ход проведения тестирования, при этом регистрируемая информация должна включать, как минимум, дату и время выполнения следующих видов операций: запуск и завершение сценария тестирования, результат выполнения сценария тестирования, изменение конфигурации тестируемого программного обеспечения, возникновение любых сбоев и ошибок",
-        level: 1,
+        level: 3,
         completed: false,
       },
       {
         id: 45,
         description:
           "Устанавливаются критерии завершения и остановки тестирования",
-        level: 1,
+        level: 2,
         completed: false,
       },
       {
         id: 46,
         description:
           "Разрабатываются отчеты о проведенном тестировании, содержащие, как минимум, описание полученных результатов, перечень обнаруженных и решенных ошибок, вывод по результатам тестирования",
-        level: 1,
+        level: 2,
         completed: false,
       },
       {
@@ -352,7 +352,7 @@ const sections = [
       {
         id: 48,
         description: "Выполняется анализ утечек чувствительных данных",
-        level: 1,
+        level: 3,
         completed: false,
       },
     ],
@@ -376,7 +376,7 @@ const sections = [
         id: 51,
         description:
           "Обеспечивается защита программного обеспечения от угроз безопасности информации, связанных с нарушением целостности, в процессе его передачи пользователю",
-        level: 1,
+        level: 3,
         completed: false,
       },
       {
@@ -390,21 +390,21 @@ const sections = [
         id: 53,
         description:
           "Организовывается хранение поставляемого пользователям программного обеспечения в неизменяемом виде",
-        level: 1,
+        level: 2,
         completed: false,
       },
       {
         id: 54,
         description:
           "Определен порядок снятия копий для поставляемого пользователям программного обеспечения",
-        level: 1,
+        level: 3,
         completed: false,
       },
       {
         id: 56,
         description:
           "Определен метод доставки программного обеспечения (обновлений программного обеспечения, включая обновления безопасности)",
-        level: 1,
+        level: 2,
         completed: false,
       },
       {
@@ -421,42 +421,42 @@ const sections = [
       {
         id: 58,
         description: "Организована служба технической поддержки",
-        level: 1,
+        level: 2,
         completed: false,
       },
       {
         id: 59,
         description:
           "Разработан регламент реагирования на поступающую информацию об уязвимостях",
-        level: 1,
+        level: 2,
         completed: false,
       },
       {
         id: 510,
         description:
           "Организовано обучение специалистов службы технической поддержки работе с поставляемым программным обеспечением, его особенностям установки и функционирования",
-        level: 1,
+        level: 3,
         completed: false,
       },
       {
         id: 511,
         description:
           "Организована работа службы технической поддержки в режиме 24/7 с регламентированным временем обработки запросов пользователей",
-        level: 1,
+        level: 3,
         completed: false,
       },
       {
         id: 512,
         description:
           "Установлены метрики оценки качества оказания технической поддержки",
-        level: 1,
+        level: 3,
         completed: false,
       },
       {
         id: 513,
         description:
           "Проводится оценка качества оказания технической поддержки с использованием метрик качества",
-        level: 1,
+        level: 3,
         completed: false,
       },
       {
@@ -586,32 +586,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const resultsDiv = document.getElementById("results");
 
-function evaluateHighPriorityTasks() {
-  let highTasksCompleted = 0;
-  let totalHighTasks = 0;
-  let baseTasksCompleted = 0;
-  let totalBaseTasks = 0;
-
-  sections.forEach((section) => {
-    const highTasks = section.tasks.filter((task) => task.isHigh);
-    const baseTasks = section.tasks.filter((task) => task.isBase);
-    highTasksCompleted += highTasks.filter((task) => task.completed).length;
-    totalHighTasks += highTasks.length;
-    baseTasksCompleted += baseTasks.filter((task) => task.completed).length;
-    totalBaseTasks += baseTasks.length;
-  });
-
-  const highTasksCompletionRate =
-    totalHighTasks > 0 ? (highTasksCompleted / totalHighTasks) * 100 : 0;
-  let securityLevelText = `<div class="">Ваше ПО безопасно на достаточном уровне</div>`;
-  if (highTasksCompletionRate > 99) {
-    securityLevelText = `<div class="finalText high">Ваше ПО безопасно на повышенном уровне</div>`;
-  } else if (highTasksCompletionRate >= 50) {
-    securityLevelText = `<div class="finalText medium">Ваше ПО безопасно на среднем уровне</div>`;
-  }
-  resultsDiv.innerHTML += securityLevelText;
-}
-
 document.addEventListener("DOMContentLoaded", function () {
   const showResultsBtn = document.getElementById("showResultsBtn");
   // const closeResultsBtn = document.getElementById("closeResultsBtn");
@@ -621,9 +595,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // closeResultsBtn?.style.display = "none";
   downloadResultsBtn.style.display = "none";
   showInfoBtn.style.display = "none";
-
   showResultsBtn.addEventListener("click", function () {
-    resultsDiv.innerHTML = ""; // Clear previous results
+    resultsDiv.innerHTML = ""; 
     let totalTasks = 0;
     let completedTasks = 0;
     sections.forEach((section) => {
