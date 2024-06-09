@@ -599,6 +599,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const showInfoBtn = document.getElementById("showInfoBtn");
   const downloadResultsBtn = document.getElementById("downloadResultsBtn");
   const resultsDiv = document.getElementById("results");
+  const infoDiv = document.getElementById("info");
 
   showResultsBtn.addEventListener("click", function () {
     resultsDiv.innerHTML = "";
@@ -647,14 +648,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   showInfoBtn.addEventListener("click", function () {
-    const infoDiv = document.getElementById("info");
-    if (infoDiv) {
-      infoDiv.innerHTML = "";
-    } else {
-      const newInfoDiv = document.createElement("div");
-      newInfoDiv.id = "info";
-      resultsDiv.appendChild(newInfoDiv);
-    }
+    if (infoDiv) infoDiv.innerHTML = "";
     sections.forEach((section) => {
       const completedTasks = section.tasks.filter(
         (task) => task.completed && task.description
@@ -664,10 +658,39 @@ document.addEventListener("DOMContentLoaded", function () {
       ).length;
       const sectionInfo = document.createElement("div");
       sectionInfo.textContent = `${section.title}: ${completedTasks} из ${totalTasks} мер выполнены`;
-      document.getElementById("info").appendChild(sectionInfo);
-    });
-  });
 
+      const level1Completed = section.tasks.filter(
+        (task) => task.completed && task.level === 1
+      ).length;
+      const level1Total = section.tasks.filter(
+        (task) => task.level === 1
+      ).length;
+      const level2Completed = section.tasks.filter(
+        (task) => task.completed && task.level === 2
+      ).length;
+      const level2Total = section.tasks.filter(
+        (task) => task.level === 2
+      ).length;
+      const level3Completed = section.tasks.filter(
+        (task) => task.completed && task.level === 3
+      ).length;
+      const level3Total = section.tasks.filter(
+        (task) => task.level === 3
+      ).length;
+
+      const levelsInfo = document.createElement("div");
+      levelsInfo.innerHTML = `
+            Уровень 1: ${level1Completed} из ${level1Total}<br>
+            Уровень 2: ${level2Completed} из ${level2Total}<br>
+            Уровень 3: ${level3Completed} из ${level3Total}
+        `;
+
+      sectionInfo.appendChild(levelsInfo);
+      infoDiv.appendChild(sectionInfo);
+    });
+
+    infoDiv.style.display = "block";
+  });
   // closeResultsBtn?.addEventListener("click", function () {
   //   resultsDiv.style.display = "none";
   //   closeResultsBtn?.style.display = "none";
