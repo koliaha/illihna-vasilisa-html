@@ -524,9 +524,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const checkbox = document.createElement("input");
         const level = document.createElement("div");
         const action = document.createElement("div");
-        action.classList.add("actionRow")
-        level.classList.add("level")
-        level.classList.add(`level-${task.level}`)
+        action.classList.add("actionRow");
+        level.classList.add("level");
+        level.classList.add(`level-${task.level}`);
         level.innerHTML = task.level;
         checkbox.type = "checkbox";
         checkbox.checked = task.completed;
@@ -602,49 +602,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
   showResultsBtn.addEventListener("click", function () {
     resultsDiv.innerHTML = "";
-    let totalTasks = 0;
-    let completedTasks = 0;
-    let totalLevel = 0;
-    let sumLevel1 = 0;
-    let sumLevel2 = 0;
-    let sumLevel3 = 0;
-    let sumCompletedLevels = 0;
+    let allLevel1Completed = true;
+    let allLevel2Completed = true;
+    let allLevel3Completed = true;
 
     sections.forEach((section) => {
-        section.tasks.forEach((task) => {
-            if (task.description) {
-                totalTasks++;
-                totalLevel += task.level;
-                if (task.completed) {
-                    completedTasks++;
-                    sumCompletedLevels += task.level;
-                }
-                if (task.level === 1) sumLevel1 += task.level;
-                if (task.level === 2) sumLevel2 += task.level;
-                if (task.level === 3) sumLevel3 += task.level;
-            }
-        });
+      section.tasks.forEach((task) => {
+        if (task.level === 1 && !task.completed) {
+          allLevel1Completed = false;
+        }
+        if (task.level === 2 && !task.completed) {
+          allLevel2Completed = false;
+        }
+        if (task.level === 3 && !task.completed) {
+          allLevel3Completed = false;
+        }
+      });
     });
 
-    const completionRate = (completedTasks / totalTasks) * 100;
     let securityLevel = "";
 
-    const sumLevel1And2 = sumLevel1 + sumLevel2;
-    const sumAllLevels = sumLevel1 + sumLevel2 + sumLevel3;
-
-    if (sumCompletedLevels < sumLevel1) {
-        securityLevel = "Процессы безопасной разработки не выстроены";
-    } else if (sumCompletedLevels >= sumLevel1 && sumCompletedLevels < sumLevel1And2) {
-        securityLevel = "Достигнут 1 уровень безопасности программного обеспечения";
-    } else if (sumCompletedLevels >= sumLevel1And2 && sumCompletedLevels < sumAllLevels) {
-        securityLevel = "Достигнут 2 уровень безопасности программного обеспечения";
-    } else if (sumCompletedLevels === sumAllLevels) {
-        securityLevel = "Достигнут 3 уровень безопасности программного обеспечения, вы можете претендовать на сертификацию программного обеспечения";
+    if (!allLevel1Completed) {
+      securityLevel =
+        "Процессы безопасной разработки не выстроены, программное обеспечение не безопасно";
+    } else if (allLevel1Completed && !allLevel2Completed) {
+      securityLevel = "Программное обеспечение безопасно на 1 уровне";
+    } else if (
+      allLevel1Completed &&
+      allLevel2Completed &&
+      !allLevel3Completed
+    ) {
+      securityLevel = "Программное обеспечение безопасно на 2 уровне";
+    } else if (allLevel1Completed && allLevel2Completed && allLevel3Completed) {
+      securityLevel = "Программное обеспечение безопасно на 3 уровне";
     }
 
     const result = document.createElement("div");
-    result.textContent = `сумма мер: ${sumCompletedLevels}, сумма 1ур: ${sumLevel1}, сумма 2ур: ${sumLevel2}, сумма 3ур: ${sumLevel3} `;
-    result.textContent += `${securityLevel} (${completedTasks} из ${totalTasks} мер выполнены)`;
+    result.textContent = securityLevel;
     resultsDiv.appendChild(result);
 
     resultsDiv.style.display = "block";
