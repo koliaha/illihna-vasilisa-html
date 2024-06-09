@@ -607,19 +607,53 @@ document.addEventListener("DOMContentLoaded", function () {
     let allLevel2Completed = true;
     let allLevel3Completed = true;
 
+    let completedTasks = 0;
+    let totalTasks = 0;
+    let level1Completed = 0;
+    let level1Total = 0;
+    let level2Completed = 0;
+    let level2Total = 0;
+    let level3Completed = 0;
+    let level3Total = 0;
+
     sections.forEach((section) => {
       section.tasks.forEach((task) => {
-        if (task.level === 1 && !task.completed) {
-          allLevel1Completed = false;
-        }
-        if (task.level === 2 && !task.completed) {
-          allLevel2Completed = false;
-        }
-        if (task.level === 3 && !task.completed) {
-          allLevel3Completed = false;
+        if (task.description) {
+          totalTasks++;
+          if (task.completed) {
+            completedTasks++;
+          }
+          if (task.level === 1) {
+            level1Total++;
+            if (task.completed) {
+              level1Completed++;
+            }
+          }
+          if (task.level === 2) {
+            level2Total++;
+            if (task.completed) {
+              level2Completed++;
+            }
+          }
+          if (task.level === 3) {
+            level3Total++;
+            if (task.completed) {
+              level3Completed++;
+            }
+          }
         }
       });
     });
+
+    if (level1Completed < level1Total) {
+      allLevel1Completed = false;
+    }
+    if (level2Completed < level2Total) {
+      allLevel2Completed = false;
+    }
+    if (level3Completed < level3Total) {
+      allLevel3Completed = false;
+    }
 
     let securityLevel = "";
 
@@ -639,7 +673,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const result = document.createElement("div");
-    result.textContent = securityLevel;
+    result.innerHTML = `
+        <p>${securityLevel}</p>
+        <p>Всего мер выполнено: ${completedTasks} из ${totalTasks}</p>
+        <p>Уровень 1: ${level1Completed} из ${level1Total}</p>
+        <p>Уровень 2: ${level2Completed} из ${level2Total}</p>
+        <p>Уровень 3: ${level3Completed} из ${level3Total}</p>
+    `;
     resultsDiv.appendChild(result);
 
     resultsDiv.style.display = "block";
