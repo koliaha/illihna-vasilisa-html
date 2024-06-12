@@ -593,12 +593,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const resultsDiv = document.getElementById("results");
+const closeResultsBtn = document.querySelector("#closeResultsBtn");
 
 document.addEventListener("DOMContentLoaded", function () {
   const showResultsBtn = document.getElementById("showResultsBtn");
   const showInfoBtn = document.getElementById("showInfoBtn");
   const downloadResultsBtn = document.getElementById("downloadResultsBtn");
-  const resultsDiv = document.getElementById("results");
   const infoDiv = document.getElementById("info");
 
   showResultsBtn.addEventListener("click", function () {
@@ -682,9 +682,13 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
     resultsDiv.appendChild(result);
 
-    resultsDiv.style.display = "block";
+    // resultsDiv.style.display = "block";
+    resultsDiv.classList.toggle("displaySec")
+    closeResultsBtn.classList.toggle("displaySec")
     downloadResultsBtn.style.display = "block";
-    showInfoBtn.style.display = "block";
+    
+    // showInfoBtn.style.display = "block";
+    showInfoBtn.classList.toggle("displaySec")
   });
 
   showInfoBtn.addEventListener("click", function () {
@@ -728,11 +732,12 @@ document.addEventListener("DOMContentLoaded", function () {
       sectionInfo.appendChild(levelsInfo);
       infoDiv.appendChild(sectionInfo);
     });
-
-    infoDiv.style.display = "block";
+    infoDiv.classList.toggle("displaySec")
   });
-  // closeResultsBtn?.addEventListener("click", function () {
-  //   resultsDiv.style.display = "none";
-  //   closeResultsBtn?.style.display = "none";
-  // });
+  closeResultsBtn?.addEventListener("click", function () {
+    infoDiv.classList.remove("displaySec")
+    resultsDiv.classList.remove("displaySec")
+    showInfoBtn.classList.toggle("displaySec")
+    closeResultsBtn.classList.remove("displaySec")
+  });
 });

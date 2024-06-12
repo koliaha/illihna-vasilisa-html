@@ -105,6 +105,14 @@ button:hover {
   font-style: italic;
   display: none;
 }
+#info {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f1f0ec;
+  border-left: 4px solid #ffcf11;
+  font-style: italic;
+  display: none;
+}
 .isBase {
   background-color: #d5f1f1;
 }
@@ -184,9 +192,17 @@ button:hover {
 }
 #closeResultsBtn {
   background-color: rgb(255, 71, 71);
+  display: none;
 }
 #downloadResultsBtn {
   background-color: rgb(0, 186, 12);
+}
+#showInfoBtn{
+  background-color: rgb(255, 200, 71);
+  display: none;
+}
+.displaySec{
+  display: block !important;
 }
 @media screen and (max-width: 568px) {
   .actionBtn {
