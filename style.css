@@ -22,6 +22,9 @@ thead {
   position: sticky;
   top: 0;
 }
+a:visited {
+  color: inherit;
+}
 /* Контейнер для всего содержимого */
 .container {
   max-width: 900px;
@@ -110,7 +113,6 @@ button:hover {
   padding: 10px;
   background-color: #f1f0ec;
   border-left: 4px solid #ffcf11;
-  font-style: italic;
   display: none;
 }
 .isBase {
@@ -159,13 +161,13 @@ button:hover {
   line-height: 20px;
   background-color: #2980b9;
 }
-.level-1{
+.level-1 {
   background-color: #db5151;
 }
-.level-2{
+.level-2 {
   background-color: #fdcb6e;
 }
-.level-3{
+.level-3 {
   background-color: #00b894;
 }
 .buttonBase {
@@ -185,19 +187,19 @@ button:hover {
 .description {
   overflow: hidden;
   height: 100%;
-  max-height: 0px; 
-  transition:  1.3s;
-
-
+  max-height: 0px;
+  transition: 1.3s;
 }
-
+.description a {
+  text-decoration: none;
+  color: orange;
+}
 .description.open {
-  max-height: 200px; 
+  max-height: 200px;
   margin-top: 10px;
   padding: 10px;
   background-color: #f1f0ec;
   border-left: 4px solid #ffcf11;
-  font-style: italic;
 }
 
 .reveal-btn {
@@ -207,7 +209,7 @@ button:hover {
   align-items: center;
   justify-content: center;
 }
-.reveal-btn img{
+.reveal-btn img {
   width: 100%;
 }
 .actionBtn,
@@ -225,11 +227,11 @@ button:hover {
 #downloadResultsBtn {
   background-color: rgb(0, 186, 12);
 }
-#showInfoBtn{
+#showInfoBtn {
   background-color: rgb(255, 200, 71);
   display: none;
 }
-.displaySec{
+.displaySec {
   display: block !important;
 }
 @media screen and (max-width: 568px) {

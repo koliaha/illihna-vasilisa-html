@@ -10,14 +10,14 @@ const sections = [
           "Прописан перечень определенных требований по безопасности, предъявляемых к программному обеспечению",
         level: 1,
         completed: false,
-        info: "Большой текст...",
+        info: "Большой текст с <a href='#'>ссылкой</a> и <b>выделением</b>...",
       },
       {
         id: 11,
         description: "Перечни прописаны в ТЗ",
         level: 1,
         completed: false,
-        info: "Большой текст...",
+        info: "Большой текст с <i>курсивом</i>...",
       },
       {
         id: 12,
@@ -540,7 +540,7 @@ const sections = [
 ];
 document.addEventListener("DOMContentLoaded", function () {
   const taskTable = document.getElementById("taskTable");
-  sections.forEach((section, index) => {
+  sections.forEach((section) => {
     const table = document.createElement("table");
     const thead = document.createElement("thead");
     const tbody = document.createElement("tbody");
@@ -611,7 +611,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const descriptionDiv = document.createElement("div");
         descriptionDiv.className = "description";
         descriptionDiv.id = "desc-" + task.id;
-        descriptionDiv.textContent = task.info;
+        descriptionDiv.innerHTML = task.info;
 
         label.appendChild(document.createTextNode(task.description));
         action.appendChild(level);
@@ -637,37 +637,6 @@ document.addEventListener("DOMContentLoaded", function () {
       checkbox.checked = completed;
     }
   }
-
-  document
-    .getElementById("downloadResultsBtn")
-    .addEventListener("click", function () {
-      let csvContent = "data:text/csv;charset=utf-8,\uFEFF";
-      sections.forEach((section) => {
-        csvContent += `"${section.title}"\n`;
-        section.tasks.forEach((task) => {
-          if (task.title) {
-            csvContent += `"${task.title}"\n`;
-          } else {
-            csvContent += `"${task.description}";"${
-              task.completed ? "Выполнено" : "Не выполнено"
-            }"\n`;
-          }
-        });
-        csvContent += "\n";
-      });
-      const results = document.getElementById("results").innerText;
-      csvContent += `"Результаты"\n"${results
-        .replace(/\n/g, " ")
-        .replace(/"/g, '""')}"\n`;
-
-      const encodedUri = encodeURI(csvContent);
-      const link = document.createElement("a");
-      link.setAttribute("href", encodedUri);
-      link.setAttribute("download", "tasks_report.csv");
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    });
 });
 
 const resultsDiv = document.getElementById("results");
@@ -811,6 +780,36 @@ document.addEventListener("DOMContentLoaded", function () {
       infoDiv.appendChild(sectionInfo);
     });
     infoDiv.classList.toggle("displaySec");
+  });
+  document
+  .getElementById("downloadResultsBtn")
+  .addEventListener("click", function () {
+    let csvContent = "data:text/csv;charset=utf-8,\uFEFF";
+    sections.forEach((section) => {
+      csvContent += `"${section.title}"\n`;
+      section.tasks.forEach((task) => {
+        if (task.title) {
+          csvContent += `"${task.title}"\n`;
+        } else {
+          csvContent += `"${task.description}";"${
+            task.completed ? "Выполнено" : "Не выполнено"
+          }"\n`;
+        }
+      });
+      csvContent += "\n";
+    });
+    const results = document.getElementById("results").innerText;
+    csvContent += `"Результаты"\n"${results
+      .replace(/\n/g, " ")
+      .replace(/"/g, '""')}"\n`;
+
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "tasks_report.csv");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   });
   closeResultsBtn?.addEventListener("click", function () {
     infoDiv.classList.remove("displaySec");
