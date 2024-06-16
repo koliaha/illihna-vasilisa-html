@@ -78,6 +78,13 @@ label {
   justify-content: space-between;
   gap: 10px;
 }
+ul{
+  list-style: square;
+}
+ul li{
+  list-style-type: circle;
+
+}
 /* Чекбоксы внутри таблицы */
 input[type="checkbox"] {
   /* margin-right: 10px; */
@@ -195,7 +202,7 @@ button:hover {
   color: orange;
 }
 .description.open {
-  max-height: 200px;
+  max-height: 700px;
   margin-top: 10px;
   padding: 10px;
   background-color: #f1f0ec;
