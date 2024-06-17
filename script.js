@@ -12,18 +12,18 @@ const sections = [
         completed: false,
         info: `Требования по безопасности предъявляются в соответствии с классом программного обеспечения и требованиями регуляторов: <br/> 
         <ul>
-  			<li>Система обнаружения вторжений – <a href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-3-fevralya-2012-g '>Профили защиты систем обнаружения вторжений</a></li>
-  			<li>Средство антивирусной защиты – <a href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-14-iyunya-2012-g '>Профили защиты средств антивирусной зашиты</a></li>
-            <li>Средство доверенной загрузки – <a href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-30-dekabrya-2013-g  '>Профили защиты средств доверенной загрузки</a></li>
-  			<li>Средство контроля съемных машинных носителей информации – <a href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-1-dekabrya-2014-g '>Профили защиты средств контроля съемных машинных носителей информации</a></li>
-            <li>Межсетевой экран – <a href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-12-sentyabrya-2016-g '>Профили защиты межсетевых экранов</a></li>
-            <li>Операционная система типа А – <a href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-8-fevralya-2017-g '>Профили защиты операционной системы типа А</a></li>
-  			<li>Операционная система типа Б и В – <a href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-11-maya-2017-g '>Профили защиты операционной системы типа Б и В</a></li>
-            <li>Средство защиты информации от воздействий, направленных на отказ в обслуживании информационных (автоматизированных) систем – <a href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-30-iyulya-2018-g-n-132 '>Требования по безопасности информации к средствам защиты информации от воздействий, направленных на отказ в обслуживании информационных (автоматизированных) систем</a></li>
-            <li>Средство контейнеризации – <a href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-4-iyulya-2022-g-n-118 '>Требования по безопасности информации к средствам контейнеризации</a></li>
-            <li>Многофункциональный межсетевой экран уровня сети – <a href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-7-marta-2023-g-n-44 '>Требования по безопасности информации к многофункциональным межсетевым экранам уровня сети</a></li>
-            <li>Средство виртуализации – <a href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-27-oktyabrya-2022-g-n-187 '>Требования по безопасности информации к средствам виртуализации</a></li>
-            <li>Прикладное программное обеспечение – <a href='https://docs.cntd.ru/document/1200172576 '>ГОСТ Р 58833-2020 Защита информации. Идентификация и аутентификация. Общие положения</a> и <a href='https://docs.cntd.ru/document/1200182791 '>ГОСТ Р 59548-2022 Защита информации. Регистрация событий безопасности. Требования к регистрируемой информации - docs.cntd.ru</a></li>                    
+  			<li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-3-fevralya-2012-g '>Система обнаружения вторжений</a></li>
+  			<li><a target='_blank' href='https://disk.yandex.ru/client/disk/Оценка%20уровня%20безопасности%20программного%20обеспечения/Нормативные%20правовые%20акты/Средство%20антивирусной%20защиты '>Средство антивирусной защиты</a></li>
+            <li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-30-dekabrya-2013-g  '>Средство доверенной загрузки</a></li>
+  			<li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-1-dekabrya-2014-g '>Средство контроля съемных машинных носителей информации</a></li>
+            <li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-12-sentyabrya-2016-g '>Межсетевой экран</a></li>
+            <li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-8-fevralya-2017-g '>Операционная система типа А</a></li>
+  			<li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-11-maya-2017-g '>Операционная система типа Б и В</a></li>
+            <li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-30-iyulya-2018-g-n-132 '>Средство защиты информации от воздействий, направленных на отказ в обслуживании информационных (автоматизированных) систем</a></li>
+            <li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-4-iyulya-2022-g-n-118 '>Средство контейнеризации</a></li>
+            <li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-7-marta-2023-g-n-44 '>Многофункциональный межсетевой экран уровня сети</a></li>
+            <li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-27-oktyabrya-2022-g-n-187 '>Средство виртуализации</a></li>
+            <li>Прикладное программное обеспечение – <a target='_blank' href='https://docs.cntd.ru/document/1200172576 '>ГОСТ Р 58833-2020 Защита информации. Идентификация и аутентификация. Общие положения</a> и <a target='_blank' href='https://docs.cntd.ru/document/1200182791 '>ГОСТ Р 59548-2022 Защита информации. Регистрация событий безопасности. Требования к регистрируемой информации - docs.cntd.ru</a></li>                    
 		</ul>         
         `,
       },
@@ -32,7 +32,7 @@ const sections = [
         description: "Перечни прописаны в ТЗ",
         level: 1,
         completed: false,
-        info: `Техническое задание разрабатывается в соответствии с <a href='https://docs.cntd.ru/document/1200007648'>ГОСТ 19.201-78 Единая система программной документации (ЕСПД). Техническое задание. Требования к содержанию и оформлению (с Изменением N 1) - docs.cntd.ru</a><br/> В техническом задании указываются требования по безопасности в соответствии с определенным классом программного обеспечения`,
+        info: `Техническое задание разрабатывается в соответствии с <a target='_blank' href='https://disk.yandex.ru/i/VtrBGyPDW3N1xw'>ГОСТ 19.201-78 Единая система программной документации (ЕСПД). Техническое задание. Требования к содержанию и оформлению</a><br/> В техническом задании указываются требования по безопасности в соответствии с определенным классом программного обеспечения`,
       },
       {
         id: 12,
@@ -42,9 +42,9 @@ const sections = [
         completed: false,
         info: `В качестве источников формирования требований необходимо придерживаться существующего законодательства:
         <ul>
-  			<li><a href='https://docs.cntd.ru/document/1200135525 '>ГОСТ Р 56939-2016 Защита информации. Разработка безопасного программного обеспечения. Общие требования </a></li>
-  			<li><a href='https://fstec.ru/protivodejstvie-korruptsii/metodicheskie-materialy/metodicheskij-dokument'>Методические рекомендации ФСТЭК России </a></li>
-            <li><a href='https://docs.cntd.ru/document/1200135525 '>Методические рекомендации Минцифры России </a></li>
+  			<li><a target='_blank' href='https://docs.cntd.ru/document/1200135525 '>ГОСТ Р 56939-2016 Защита информации. Разработка безопасного программного обеспечения. Общие требования </a></li>
+  			<li><a target='_blank' href='https://fstec.ru/protivodejstvie-korruptsii/metodicheskie-materialy/metodicheskij-dokument'>Методические рекомендации ФСТЭК России </a></li>
+            <li><a target='_blank' href='https://docs.cntd.ru/document/1200135525 '>Методические рекомендации Минцифры России </a></li>
 		</ul>`,
       },
       {
@@ -53,7 +53,7 @@ const sections = [
           "Соблюдена однозначность трактования требований, определяющих свойства безопасности программного обеспечения",
         level: 2,
         completed: false,
-        info: `Данную меру необходимо выполнять в соответствии со стандартом <a href='https://standards.ieee.org/ieee/830/1222/ '>ЕЕЕ-830-1998 Recommended Practice for Software Requirements Specifications</a><br/> Переведенный по ссылке стандарт <a href='https://github.com/maxvipon/IEEE-Std-830-1998-RU/blob/master/IEEE%20STD%20830-1998%20(RU).md'>Рекомендации IEEE по разработке требований к программному обеспечению</a>`,
+        info: `Данную меру необходимо выполнять в соответствии со стандартом <a target='_blank' href='https://standards.ieee.org/ieee/830/1222/ '>ЕЕЕ-830-1998 Recommended Practice for Software Requirements Specifications</a><br/> Переведенный стандарт <a target='_blank' href='https://github.com/maxvipon/IEEE-Std-830-1998-RU/blob/master/IEEE%20STD%20830-1998%20(RU).md'>Рекомендации IEEE по разработке требований к программному обеспечению</a>`,
       },
       {
         id: 14,
@@ -61,7 +61,7 @@ const sections = [
           "Соблюдена взаимная непротиворечивость набора требований, определяющих свойства безопасности программного обеспечения",
         level: 2,
         completed: false,
-        info: `Данную меру необходимо выполнять в соответствии со стандартом <a href='https://standards.ieee.org/ieee/830/1222/ '>ЕЕЕ-830-1998 Recommended Practice for Software Requirements Specifications</a><br/> Переведенный по ссылке стандарт <a href='https://github.com/maxvipon/IEEE-Std-830-1998-RU/blob/master/IEEE%20STD%20830-1998%20(RU).md  '>Рекомендации IEEE по разработке требований к программному обеспечению</a>`,
+        info: `Данную меру необходимо выполнять в соответствии со стандартом <a target='_blank' href='https://standards.ieee.org/ieee/830/1222/ '>ЕЕЕ-830-1998 Recommended Practice for Software Requirements Specifications</a><br/> Переведенный стандарт <a target='_blank' href='https://github.com/maxvipon/IEEE-Std-830-1998-RU/blob/master/IEEE%20STD%20830-1998%20(RU).md  '>Рекомендации IEEE по разработке требований к программному обеспечению</a>`,
       },
       {
         id: 15,
@@ -69,7 +69,7 @@ const sections = [
           "Соблюдена адекватность требований, определяющих свойства безопасности программного обеспечения",
         level: 2,
         completed: false,
-        info: `Данную меру необходимо выполнять в соответствии со стандартом <a href='https://standards.ieee.org/ieee/830/1222/ '>ЕЕЕ-830-1998 Recommended Practice for Software Requirements Specifications</a><br/> Переведенный по ссылке стандарт <a href='https://github.com/maxvipon/IEEE-Std-830-1998-RU/blob/master/IEEE%20STD%20830-1998%20(RU).md'>Рекомендации IEEE по разработке требований к программному обеспечению</a>`,
+        info: `Данную меру необходимо выполнять в соответствии со стандартом <a target='_blank' href='https://standards.ieee.org/ieee/830/1222/ '>ЕЕЕ-830-1998 Recommended Practice for Software Requirements Specifications</a><br/> Переведенный стандарт <a target='_blank' href='https://github.com/maxvipon/IEEE-Std-830-1998-RU/blob/master/IEEE%20STD%20830-1998%20(RU).md'>Рекомендации IEEE по разработке требований к программному обеспечению</a>`,
       },
       {
         id: 16,
@@ -77,13 +77,14 @@ const sections = [
           "Соблюдена полнота требований, определяющих свойства безопасности программного обеспечения",
         level: 2,
         completed: false,
-        info: `Данную меру необходимо выполнять в соответствии со стандартом <a href='https://standards.ieee.org/ieee/830/1222/ '>ЕЕЕ-830-1998 Recommended Practice for Software Requirements Specifications</a><br/> Переведенный по ссылке стандарт <a href='https://github.com/maxvipon/IEEE-Std-830-1998-RU/blob/master/IEEE%20STD%20830-1998%20(RU).md'>Рекомендации IEEE по разработке требований к программному обеспечению </a>`,
+        info: `Данную меру необходимо выполнять в соответствии со стандартом <a target='_blank' href='https://standards.ieee.org/ieee/830/1222/ '>ЕЕЕ-830-1998 Recommended Practice for Software Requirements Specifications</a><br/> Переведенный стандарт <a target='_blank' href='https://github.com/maxvipon/IEEE-Std-830-1998-RU/blob/master/IEEE%20STD%20830-1998%20(RU).md'>Рекомендации IEEE по разработке требований к программному обеспечению </a>`,
       },
     ],
   },
   {
     id: 2,
-    title: "Проектирование архитектуры программного обеспечения",
+    title:
+      "<a target='_blank' href='https://docs.cntd.ru/document/1200164529 '>Проектирование архитектуры программного обеспечения</a>",
 
     tasks: [
       {
@@ -92,7 +93,7 @@ const sections = [
           "Подготовлен проект архитектуры программного обеспечения с уровнем детализации, достаточным для понимания структуры программного обеспечения другими участниками разработки программного обеспечения",
         level: 3,
         completed: false,
-        info: `Проект архитектуры программы должен быть представлен в описании программы в соответствии с <a href='https://docs.cntd.ru/document/1200007652 '>ГОСТ 19.402-78 Единая система программной документации (ЕСПД). Описание программы (с Изменением N 1) </a> и пояснительной записке в соответствии с <a href='https://docs.cntd.ru/document/1200007671  '>ГОСТ 19.404-79 Единая система программной документации (ЕСПД). Пояснительная записка. Требования к содержанию и оформлению</a>`,
+        info: `Проект архитектуры программы должен быть представлен в описании программы в соответствии с <a target='_blank' href='https://docs.cntd.ru/document/1200007652 '>ГОСТ 19.402-78 Единая система программной документации (ЕСПД). Описание программы </a> и пояснительной записке в соответствии с <a target='_blank' href='https://docs.cntd.ru/document/1200007671  '>ГОСТ 19.404-79 Единая система программной документации (ЕСПД). Пояснительная записка. Требования к содержанию и оформлению</a>`,
       },
       {
         id: 21,
@@ -101,15 +102,15 @@ const sections = [
         completed: false,
         info: `Для разработки модели угроз необходимо использовать следующие источники:   
         <ul>
-  			<li><a href='https://docs.cntd.ru/document/1200164529 '>ГОСТ Р 58412-2019 Защита информации. Разработка безопасного программного обеспечения. Угрозы безопасности информации при разработке программного обеспечения</a></li>
-  			<li><a href='https://www.microsoft.com/en-us/securityengineering/sdl/threatmodeling '>STRIDE и Threat Modeling Tool</a> от Microsoft </li>
-            <li>Инструмент <a href=' https://github.com/rung/threat-matrix-cicd'>Матрица угроз ATT&CK для CI/CD </a></li>
-            <li><a href='https://github.com/secmerc/materialize-threats'>Materialize Threats Tools </a></li>
-            <li><a href='https://github.com/threatspec/threatspec'>threatspec </a></li>
-            <li><a href='https://github.com/devsecops/raindance'>The Raindance Project </a></li>
-            <li><a href='https://github.com/izar/pytm'>PyTM </a></li>
-            <li><a href='https://mal-lang.org/ '>Meta Attack Language </a></li>
-            <li><a href='https://github.com/Threagile/threagile'>Agile Threat Modeling Toolkit </a></li>
+  			<li><a target='_blank' href='https://docs.cntd.ru/document/1200164529 '>ГОСТ Р 58412-2019 Защита информации. Разработка безопасного программного обеспечения. Угрозы безопасности информации при разработке программного обеспечения</a></li>
+  			<li><a target='_blank' href='https://www.microsoft.com/en-us/securityengineering/sdl/threatmodeling '>STRIDE и Threat Modeling Tool</a> от Microsoft </li>
+            <li>Инструмент <a target='_blank' href=' https://github.com/rung/threat-matrix-cicd'>Матрица угроз ATT&CK для CI/CD </a></li>
+            <li><a target='_blank' href='https://github.com/secmerc/materialize-threats'>Materialize Threats Tools </a></li>
+            <li><a target='_blank' href='https://github.com/threatspec/threatspec'>threatspec </a></li>
+            <li><a target='_blank' href='https://github.com/devsecops/raindance'>The Raindance Project </a></li>
+            <li><a target='_blank' href='https://github.com/izar/pytm'>PyTM </a></li>
+            <li><a target='_blank' href='https://mal-lang.org/ '>Meta Attack Language </a></li>
+            <li><a target='_blank' href='https://github.com/Threagile/threagile'>Agile Threat Modeling Toolkit </a></li>
 		</ul>`,
       },
       {
@@ -118,7 +119,7 @@ const sections = [
           "По результатам моделирования угроз и анализа поверхности атаки приоритизированы и устранены потенциальные уязвимости (угрозы безопасности) с учетом их критичности",
         level: 1,
         completed: false,
-        info: `Критичность угроз определяется в соответствии с <a href='https://bdu.fstec.ru/threat '>Банком данных угроз безопасности информации ФСТЭК России </a>`,
+        info: `Критичность угроз определяется в соответствии с <a target='_blank' href='https://bdu.fstec.ru/threat '>Банком данных угроз безопасности информации ФСТЭК России </a>`,
       },
       {
         id: 23,
@@ -126,15 +127,15 @@ const sections = [
           "Разработан и применен в разработке программного обеспечения регламент устранения потенциальных уязвимостей",
         level: 1,
         completed: false,
-        info: `Регламент разрабатывается в соответствии с <a href='  https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества. Требования (Переиздание)</a>`,
+        info: `Регламент разрабатывается в соответствии с <a target='_blank' href='  https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества. Требования</a>`,
       },
       {
         id: 24,
         description: "Выполнено описание поверхности атаки",
         level: 1,
         completed: false,
-        info: `Необходимо для определения всех возможных точек входа, через которые злоумышленники могут попытаться проникнуть в систему <br/> Поверхность атаки выявляется с помощью инструмента для определения поверхности атаки <a href='  https://www.ispras.ru/technologies/natch/ '>Natch</a> от ИСП РАН <br/>
-        Описание поверхности атаки составляется в соответствии с рекомендациями документа <a href='  https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении” (ФСТЭК России, 2020)</a>`,
+        info: `Необходимо для определения всех возможных точек входа, через которые злоумышленники могут попытаться проникнуть в систему <br/> Поверхность атаки выявляется с помощью инструмента для определения поверхности атаки <a target='_blank' href='  https://www.ispras.ru/technologies/natch/ '>Natch</a> от ИСП РАН <br/>
+        Описание поверхности атаки составляется в соответствии с рекомендациями документа <a target='_blank' href='  https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020)</a>`,
       },
     ],
   },
@@ -152,21 +153,21 @@ const sections = [
           "Разработан план обучения с перечислением участников команды разработки",
         level: 2,
         completed: false,
-        info: ``,
+        info: `План обучения разрабатывается в соответствии с <a target='_blank' href='https://docs.cntd.ru/document/1200062244'>ГОСТ Р ИСО 10015-2007 Менеджмент организации. Руководящие указания по обучению</a>`,
       },
       {
         id: 31,
         description: "Установлена периодичность обучения",
         level: 2,
         completed: false,
-        info: ``,
+        info: `Периодичность проведения обучения разрабатывается в соответствии с <a target='_blank' href='https://docs.cntd.ru/document/1200062244'>ГОСТ Р ИСО 10015-2007 Менеджмент организации. Руководящие указания по обучению</a>`,
       },
       {
         id: 32,
         description: "Определены критерии успешности прохождения обучения",
         level: 3,
         completed: false,
-        info: ``,
+        info: `Критерии успешности прохождения обучения разрабатывается в соответствии с <a target='_blank' href='https://docs.cntd.ru/document/1200062244'>ГОСТ Р ИСО 10015-2007 Менеджмент организации. Руководящие указания по обучению</a>`,
       },
       {
         id: 33,
@@ -174,7 +175,7 @@ const sections = [
           "Определены навыки, требующиеся для каждого участника разработки",
         level: 2,
         completed: false,
-        info: ``,
+        info: `Навыки, требуемые для каждого участника разработки, определяются в соответствии с <a target='_blank' href='https://docs.cntd.ru/document/1200118020'>ГОСТ Р ИСО 21500-2014 Руководство по проектному менеджменту</a>`,
       },
       {
         id: 34,
@@ -182,7 +183,7 @@ const sections = [
           "Проводится обучение всех участников команды разработки, задействованных в разработке кода программного обеспечения",
         level: 3,
         completed: false,
-        info: ``,
+        info: `Обучения всех частников команды проходит в соответствии с <a target='_blank' href='https://docs.cntd.ru/document/1200062244'>ГОСТ Р ИСО 10015-2007 Менеджмент организации. Руководящие указания по обучению</a>`,
       },
       {
         id: 35,
@@ -190,7 +191,7 @@ const sections = [
           "Сформировывается отчет об обучении с указанием участников и пройденных программ (курсов) по итогам обучения",
         level: 3,
         completed: false,
-        info: ``,
+        info: `Отчет об обучении разрабатывается в соответствии с <a target='_blank' href='https://docs.cntd.ru/document/1200118020'>ГОСТ Р ИСО 21500-2014 Руководство по проектному менеджменту</a>`,
       },
       {
         id: 36,
@@ -198,7 +199,7 @@ const sections = [
           "Проводится повторное обучение сотрудников в случае получения ими неудовлетворительной оценки по результатам обучения",
         level: 3,
         completed: false,
-        info: ``,
+        info: `Повторное обучение способствует повышению квалификации сотрудников, что в конечном итоге улучшает качество разработки и поддержки программного обеспечения`,
       },
       {
         id: 37,
@@ -206,7 +207,7 @@ const sections = [
           "Сотрудники отстраняются от возможности изменения кода программного обеспечения в случае получения ими неудовлетворительной оценки по результатам обучения",
         level: 3,
         completed: false,
-        info: ``,
+        info: `Отстранение сотрудников от возможности изменения кода программного обеспечения в случае получения ими неудовлетворительной оценки по результатам обучения важно для предотвращения внесения потенциально опасных изменений в систему. Это помогает поддерживать безопасность и надежности программного обеспечения, гарантируя, что только компетентные и квалифицированные сотрудники имеют доступ к изменению кода`,
       },
       {
         id: 38,
@@ -214,14 +215,14 @@ const sections = [
           "Проводится обучение всех участников команды разработки, задействованных в разработке кода программного обеспечения",
         level: 2,
         completed: false,
-        info: ``,
+        info: `План обучения разрабатывается в соответствии с <a target='_blank' href='https://docs.cntd.ru/document/1200062244'>ГОСТ Р ИСО 10015-2007 Менеджмент организации. Руководящие указания по обучению</a>`,
       },
       {
         id: 39,
         description: "Проводится оценка эффективности программы обучения",
         level: 2,
         completed: false,
-        info: ``,
+        info: `Оценка эффективности программы обучения разрабатывается в соответствии с <a target='_blank' href='https://docs.cntd.ru/document/1200118020'>ГОСТ Р ИСО 21500-2014 Руководство по проектному менеджменту</a>`,
       },
       {
         id: 310,
@@ -229,7 +230,7 @@ const sections = [
           "Проводится анализ существующих программ обучения с учетом потребностей сотрудников",
         level: 2,
         completed: false,
-        info: ``,
+        info: `Анализ существующих программ обучения проводится в соответствии с <a target='_blank' href='https://docs.cntd.ru/document/1200118020'>ГОСТ Р ИСО 21500-2014 Руководство по проектному менеджменту</a>`,
       },
       {
         id: 311,
@@ -237,7 +238,7 @@ const sections = [
           "По результатам проведенного анализа выполняется планирование и организовывается обучение сотрудников",
         level: 2,
         completed: false,
-        info: ``,
+        info: `Планирование и организация обучения сотрудников выполняется в соответствии с <a target='_blank' href='https://docs.cntd.ru/document/1200062244'>ГОСТ Р ИСО 10015-2007 Менеджмент организации. Руководящие указания по обучению</a>`,
       },
       {
         id: 312,
@@ -245,7 +246,7 @@ const sections = [
           "Проводится выборочная проверка качества обучения сотрудников",
         level: 3,
         completed: false,
-        info: ``,
+        info: `Проверка качества обучения проводится в соответствии с <a target='_blank' href='https://docs.cntd.ru/document/1200062244'>ГОСТ Р ИСО 10015-2007 Менеджмент организации. Руководящие указания по обучению</a>`,
       },
       {
         id: 313,
@@ -253,7 +254,7 @@ const sections = [
           "Определяются критерии пересмотра программ обучения (курсов, тренингов и т.п.)",
         level: 3,
         completed: false,
-        info: ``,
+        info: `Критерии пересмотра программ обучения определяются в соответствии с <a target='_blank' href='https://docs.cntd.ru/document/1200118020'>ГОСТ Р ИСО 21500-2014 Руководство по проектному менеджменту</a>`,
       },
       {
         id: 314,
@@ -261,7 +262,7 @@ const sections = [
           "Осуществляется контроль качества программ обучения (курсов, тренингов и т.п.) независимым аудитором",
         level: 3,
         completed: false,
-        info: ``,
+        info: `Контроль качества программ обучения осуществляется в соответствии с <a target='_blank' href='https://docs.cntd.ru/document/1200062244'>ГОСТ Р ИСО 10015-2007 Менеджмент организации. Руководящие указания по обучению</a>`,
       },
       {
         id: 3121,
@@ -274,7 +275,7 @@ const sections = [
           "Разработаны и утверждены регламентирующие документы по проведению статического анализа и экспертизы исходного кода программного обеспечения",
         level: 1,
         completed: false,
-        info: `Регламентирующие документы разрабатываются в соответствии с <a href='https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества. Требования (Переиздание)</a>`,
+        info: `Регламентирующие документы разрабатываются в соответствии с <a target='_blank' href='https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества. Требования (Переиздание)</a>`,
       },
       {
         id: 316,
@@ -284,13 +285,13 @@ const sections = [
         completed: false,
         info: `Инструменты статического анализа должны подбираться в соответствии с:
         <ul>
-  			<li><a href='https://docs.cntd.ru/document/1304734159'>ГОСТ Р 71207-2024 Защита информации. Разработка безопасного программного обеспечения. Статический анализ программного обеспечения. Общие требования </a></li>
-  			<li>Рекомендациями документа <a href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020) </a></li>
+  			<li><a target='_blank' href='https://docs.cntd.ru/document/1304734159'>ГОСТ Р 71207-2024 Защита информации. Разработка безопасного программного обеспечения. Статический анализ программного обеспечения. Общие требования </a></li>
+  			<li>Рекомендациями документа <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020) </a></li>
          </ul></br>
          Инструменты для проведения статического анализа следует подбирать из состава отечественных программ для статического анализа: 
         <ul>
-  			<li>Статический анализатор <a href='https://www.ispras.ru/technologies/svace/'>Svace</a> от ИСП РАН</li>
-  			<li>Статический анализатор безопасности приложений <a href='https://rt-solar.ru/products/solar_appscreener/'>Solar appScreener</a> от ГК “Солар”</li>`,
+  			<li>Статический анализатор <a target='_blank' href='https://www.ispras.ru/technologies/svace/'>Svace</a> от ИСП РАН</li>
+  			<li>Статический анализатор безопасности приложений <a target='_blank' href='https://rt-solar.ru/products/solar_appscreener/'>Solar appScreener</a> от ГК “Солар”</li>`,
       },
       {
         id: 317,
@@ -300,8 +301,8 @@ const sections = [
         completed: false,
         info: `Критерии срабатывания подбираются в соответствии с: 
         <ul>
-  			<li><a href='https://docs.cntd.ru/document/1304734159'>ГОСТ Р 71207-2024 Защита информации. Разработка безопасного программного обеспечения. Статический анализ программного обеспечения. Общие требования</a></li>
-  			<li>Рекомендациями документа <a href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020)</a></li>
+  			<li><a target='_blank' href='https://docs.cntd.ru/document/1304734159'>ГОСТ Р 71207-2024 Защита информации. Разработка безопасного программного обеспечения. Статический анализ программного обеспечения. Общие требования</a></li>
+  			<li>Рекомендациями документа <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020)</a></li>
          </ul>`,
       },
       {
@@ -310,10 +311,10 @@ const sections = [
           "Обрабатываются срабатывания статического анализатора в соответствии с правилами обработки ошибок, установленными в регламентирующих документах организации, с учетом типов и уровней критичности ошибок и особенностей инструментов статического анализа и экспертизы исходного кода программного обеспечения",
         level: 1,
         completed: false,
-        info: `Регламентирующие документы разрабатываются в соответствии с <a href='  https://docs.cntd.ru/document/1200124394 '>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества. Требования (Переиздание)</a></br>
+        info: `Регламентирующие документы разрабатываются в соответствии с <a target='_blank' href='  https://docs.cntd.ru/document/1200124394 '>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества. Требования</a></br>
         <ul>
-  			<li><a href='https://docs.cntd.ru/document/1304734159'>ГОСТ Р 71207-2024 Защита информации. Разработка безопасного программного обеспечения. Статический анализ программного обеспечения. Общие требования</a></li>
-  			<li>Рекомендациями документа <a href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020)</a></li>
+  			<li><a target='_blank' href='https://docs.cntd.ru/document/1304734159'>ГОСТ Р 71207-2024 Защита информации. Разработка безопасного программного обеспечения. Статический анализ программного обеспечения. Общие требования</a></li>
+  			<li>Рекомендациями документа <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020)</a></li>
          </ul>`,
       },
       {
@@ -324,8 +325,8 @@ const sections = [
         completed: false,
         info: `Параметры и настройка инструментов статического анализа определяется, опираясь на: 
         <ul>
-  			<li><a href='https://docs.cntd.ru/document/1304734159'>ГОСТ Р 71207-2024 Защита информации. Разработка безопасного программного обеспечения. Статический анализ программного обеспечения. Общие требования</a></li>
-  			<li>Рекомендациями документа <a href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020)</a></li>
+  			<li><a target='_blank' href='https://docs.cntd.ru/document/1304734159'>ГОСТ Р 71207-2024 Защита информации. Разработка безопасного программного обеспечения. Статический анализ программного обеспечения. Общие требования</a></li>
+  			<li>Рекомендациями документа <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020)</a></li>
          </ul>`,
       },
       {
@@ -334,7 +335,7 @@ const sections = [
           "Осуществляется пересмотр параметров настройки инструментов статического анализа и экспертизы исходного кода программного обеспечения с установленной периодичностью и при выполнении установленных событий (изменениях в правилах сборки, применяемых статических анализаторах, получении информации о потенциальных уязвимостях и т.п.)",
         level: 1,
         completed: false,
-        info: `Пересмотр параметров настройки инструментов статического анализа и экспертизы исходного кода программного обеспечения производится в соответствии с рекомендациями разработчиков статического анализа и рекомендациями документа <a href='  https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020) </a>`,
+        info: `Пересмотр параметров настройки инструментов статического анализа и экспертизы исходного кода программного обеспечения производится в соответствии с рекомендациями разработчиков статического анализа и рекомендациями документа <a target='_blank' href='  https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020) </a>`,
       },
       {
         id: 321,
@@ -342,7 +343,7 @@ const sections = [
           "Проводится регулярный статический анализ и экспертиза исходного кода программного обеспечения в рамках жизненного цикла программного обеспечения",
         level: 2,
         completed: false,
-        info: `Регулярность проведения статического анализа устанавливается соответствии с рекомендациями разработчиков статического анализа и рекомендациями документа <a href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020) </a>`,
+        info: `Регулярность проведения статического анализа устанавливается соответствии с рекомендациями разработчиков статического анализа и рекомендациями документа <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020) </a>`,
       },
       {
         id: 322,
@@ -350,7 +351,7 @@ const sections = [
           "Осуществляется контроль устранения выявленных потенциальных ошибок",
         level: 1,
         completed: false,
-        info: `Контроль устранения выявленных потенциальных ошибок осуществляется <a href='https://docs.cntd.ru/document/1304734159'>ГОСТ Р 71207-2024 Защита информации. Разработка безопасного программного обеспечения. Статический анализ программного обеспечения. Общие требования </a>`,
+        info: `Контроль устранения выявленных потенциальных ошибок осуществляется <a target='_blank' href='https://docs.cntd.ru/document/1304734159'>ГОСТ Р 71207-2024 Защита информации. Разработка безопасного программного обеспечения. Статический анализ программного обеспечения. Общие требования </a>`,
       },
       {
         id: 323,
@@ -360,8 +361,8 @@ const sections = [
         completed: false,
         info: `Статический анализ и экспертиза всего исходного кода проводится в соответствии с: 
         <ul>
-  			<li><a href='https://docs.cntd.ru/document/1304734159'>ГОСТ Р 71207-2024 Защита информации. Разработка безопасного программного обеспечения. Статический анализ программного обеспечения. Общие требования </a></li>
-  			<li>рекомендациями документа<a href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020)</a></li>
+  			<li><a target='_blank' href='https://docs.cntd.ru/document/1304734159'>ГОСТ Р 71207-2024 Защита информации. Разработка безопасного программного обеспечения. Статический анализ программного обеспечения. Общие требования </a></li>
+  			<li>рекомендациями документа<a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020)</a></li>
          </ul>`,
       },
       {
@@ -372,8 +373,8 @@ const sections = [
         completed: false,
         info: `Статический анализ и экспертиза исходного кода программного обеспечения всех заимствованных компонентов проводится в соответствии с: 
         <ul>
-  			<li><a href='https://docs.cntd.ru/document/1304734159'>ГОСТ Р 71207-2024 Защита информации. Разработка безопасного программного обеспечения. Статический анализ программного обеспечения. Общие требования</a></li>
-  			<li>рекомендациями документа<a href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020)</a></li>
+  			<li><a target='_blank' href='https://docs.cntd.ru/document/1304734159'>ГОСТ Р 71207-2024 Защита информации. Разработка безопасного программного обеспечения. Статический анализ программного обеспечения. Общие требования</a></li>
+  			<li>рекомендациями документа<a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020)</a></li>
          </ul>`,
       },
       {
@@ -384,8 +385,8 @@ const sections = [
         completed: false,
         info: `Статический анализ и экспертиза исходного кода программного обеспечения неизменяемого исходного кода при выполнении установленных событий проводится на основании: 
         <ul>
-  			<li><a href='https://docs.cntd.ru/document/1304734159'>ГОСТ Р 71207-2024 Защита информации. Разработка безопасного программного обеспечения. Статический анализ программного обеспечения. Общие требования</a></li>
-  			<li>рекомендациями документа<a href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020)</a></li>
+  			<li><a target='_blank' href='https://docs.cntd.ru/document/1304734159'>ГОСТ Р 71207-2024 Защита информации. Разработка безопасного программного обеспечения. Статический анализ программного обеспечения. Общие требования</a></li>
+  			<li>рекомендациями документа<a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020)</a></li>
          </ul>`,
       },
     ],
@@ -403,9 +404,9 @@ const sections = [
         completed: false,
         info: `План тестирования, включая план тестирования функций безопасности, разрабатывается в соответствии с рекомендациями: 
         <ul>
-  			<li><a href='https://docs.cntd.ru/document/1200135525'>ГОСТ Р 56939-2016 Защита информации. Разработка безопасного программного обеспечения. Общие требования</a></li>
-  			<li>Рекомендациями документа <a href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76'>Требования по безопасности информации, устанавливающие уровни доверия к средствам технической защиты информации и средствам обеспечения безопасности информационных технологий” (ФСТЭК России, 2018)</a></li>
-            <li>Рекомендациями документа <a href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020) </a></li>
+  			<li><a target='_blank' href='https://docs.cntd.ru/document/1200135525'>ГОСТ Р 56939-2016 Защита информации. Разработка безопасного программного обеспечения. Общие требования</a></li>
+  			<li>Рекомендациями документа <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76'>Требования по безопасности информации, устанавливающие уровни доверия к средствам технической защиты информации и средствам обеспечения безопасности информационных технологий” (ФСТЭК России, 2018)</a></li>
+            <li>Рекомендациями документа <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020) </a></li>
          </ul>`,
       },
       {
@@ -416,9 +417,9 @@ const sections = [
         completed: false,
         info: `Различные виды тестирования, позволяющие протестировать программное обеспечение определяются в соответствии с рекомендациями:
         <ul>
-  			<li><a href='https://docs.cntd.ru/document/1200135525'>ГОСТ Р 56939-2016 Защита информации. Разработка безопасного программного обеспечения. Общие требования</a></li>
-  			<li>Рекомендациями документа <a href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76'>Требования по безопасности информации, устанавливающие уровни доверия к средствам технической защиты информации и средствам обеспечения безопасности информационных технологий” (ФСТЭК России, 2018)</a></li>
-            <li>Рекомендациями документа <a href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020) </a></li>
+  			<li><a target='_blank' href='https://docs.cntd.ru/document/1200135525'>ГОСТ Р 56939-2016 Защита информации. Разработка безопасного программного обеспечения. Общие требования</a></li>
+  			<li>Рекомендациями документа <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76'>Требования по безопасности информации, устанавливающие уровни доверия к средствам технической защиты информации и средствам обеспечения безопасности информационных технологий” (ФСТЭК России, 2018)</a></li>
+            <li>Рекомендациями документа <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020) </a></li>
          </ul>`,
       },
       {
@@ -429,9 +430,9 @@ const sections = [
         completed: false,
         info: `Управление конфигурацией при выполнении каждого сценария тестирования выполняется в соответствии с рекомендациями:
         <ul>
-  			<li><a href='https://docs.cntd.ru/document/1200135525'>ГОСТ Р 56939-2016 Защита информации. Разработка безопасного программного обеспечения. Общие требования</a></li>
-  			<li>Рекомендациями документа <a href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normативnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76'>Требования по безопасности информации, устанавливающие уровни доверия к средствам технической защиты информации и средствам обеспечения безопасности информационных технологий” (ФСТЭК России, 2018)</a></li>
-            <li>Рекомендациями документа <a href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020) </a></li>
+  			<li><a target='_blank' href='https://docs.cntd.ru/document/1200135525'>ГОСТ Р 56939-2016 Защита информации. Разработка безопасного программного обеспечения. Общие требования</a></li>
+  			<li>Рекомендациями документа <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normативnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76'>Требования по безопасности информации, устанавливающие уровни доверия к средствам технической защиты информации и средствам обеспечения безопасности информационных технологий” (ФСТЭК России, 2018)</a></li>
+            <li>Рекомендациями документа <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020) </a></li>
          </ul>`,
       },
       {
@@ -442,9 +443,9 @@ const sections = [
         completed: false,
         info: `Процесс исправления ошибок фиксируется в инструкциях в соответствии рекомендациями: 
         <ul>
-  			<li><a href='https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества. Требования (Переиздание) </a></li>
-  			<li><a href='https://docs.cntd.ru/document/1200135525'>ГОСТ Р 56939-2016 Защита информации. Разработка безопасного программного обеспечения. Общие требования</a></li>
-            <li>Рекомендациями документа <a href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020) </a></li>
+  			<li><a target='_blank' href='https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества. Требования</a></li>
+  			<li><a target='_blank' href='https://docs.cntd.ru/document/1200135525'>ГОСТ Р 56939-2016 Защита информации. Разработка безопасного программного обеспечения. Общие требования</a></li>
+            <li>Рекомендациями документа <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020) </a></li>
          </ul>`,
       },
       {
@@ -455,9 +456,9 @@ const sections = [
         completed: false,
         info: `Ход проведения тестирования фиксируется в документации на основании:  
         <ul>
-  			<li><a href='https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества. Требования (Переиздание)</a></li>
-  			<li><a href='https://docs.cntd.ru/document/1200135525'>ГОСТ Р 56939-2016 Защита информации. Разработка безопасного программного обеспечения. Общие требования</a></li>
-            <li>Рекомендациями документа <a href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020) </a></li>
+  			<li><a target='_blank' href='https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества. Требования</a></li>
+  			<li><a target='_blank' href='https://docs.cntd.ru/document/1200135525'>ГОСТ Р 56939-2016 Защита информации. Разработка безопасного программного обеспечения. Общие требования</a></li>
+            <li>Рекомендациями документа <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020) </a></li>
          </ul>`,
       },
       {
@@ -466,7 +467,7 @@ const sections = [
           "Устанавливаются критерии завершения и остановки тестирования",
         level: 2,
         completed: false,
-        info: `Критерии завершения тестирования определяются в соответствии с рекомендациями документа <a href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020)  </a>`,
+        info: `Критерии завершения тестирования определяются в соответствии с рекомендациями документа <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020)  </a>`,
       },
       {
         id: 46,
@@ -476,8 +477,8 @@ const sections = [
         completed: false,
         info: `Отчеты разрабатываются в соответствии с:   
         <ul>
-  			<li><a href='https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества. Требования (Переиздание)</a></li>
-            <li>Рекомендациями документа <a href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020) </a></li>
+  			<li><a target='_blank' href='https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества. Требования</a></li>
+            <li>Рекомендациями документа <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020) </a></li>
          </ul>`,
       },
       {
@@ -486,14 +487,14 @@ const sections = [
           "Осуществляется сбор информации об исследуемом программном обеспечении",
         level: 2,
         completed: false,
-        info: `Сбор информации осуществляется в соответствии с рекомендациями документа <a href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020)  </a>`,
+        info: `Сбор информации осуществляется в соответствии с рекомендациями документа <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020)  </a>`,
       },
       {
         id: 48,
         description: "Выполняется анализ утечек чувствительных данных",
         level: 1,
         completed: false,
-        info: `Анализ утечки чувствительных данных выполняется в соответствии с рекомендациями документа <a href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020)  </a>`,
+        info: `Анализ утечки чувствительных данных выполняется в соответствии с рекомендациями документа <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020)  </a>`,
       },
     ],
   },
@@ -513,8 +514,8 @@ const sections = [
         completed: false,
         info: `Отчеты разрабатываются в соответствии с:   
         <ul>
-  			<li><a href='https://docs.cntd.ru/document/1200007627'>ГОСТ 19.101-77 Единая система программной документации. Виды программ и программных документов</a></li>            
-  			<li>Рекомендациями документа <a href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76'>Требования по безопасности информации, устанавливающие уровни доверия к средствам технической защиты информации и средствам обеспечения безопасности информационных технологий” (ФСТЭК России, 2018)</a></li>
+  			<li><a target='_blank' href='https://docs.cntd.ru/document/1200007627'>ГОСТ 19.101-77 Единая система программной документации. Виды программ и программных документов</a></li>            
+  			<li>Рекомендациями документа <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76'>Требования по безопасности информации, устанавливающие уровни доверия к средствам технической защиты информации и средствам обеспечения безопасности информационных технологий” (ФСТЭК России, 2018)</a></li>
          </ul>`,
       },
       {
@@ -523,7 +524,7 @@ const sections = [
           "Обеспечивается защита программного обеспечения от угроз безопасности информации, связанных с нарушением целостности, в процессе его передачи пользователю",
         level: 1,
         completed: false,
-        info: `Защита программного обеспечения при поставке осуществляется в соответствии с документом <a href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76'>Требования по безопасности информации, устанавливающие уровни доверия к средствам технической защиты информации и средствам обеспечения безопасности информационных технологий” (ФСТЭК России, 2018)</a>`,
+        info: `Защита программного обеспечения при поставке осуществляется в соответствии с документом <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76'>Требования по безопасности информации, устанавливающие уровни доверия к средствам технической защиты информации и средствам обеспечения безопасности информационных технологий” (ФСТЭК России, 2018)</a>`,
       },
       {
         id: 52,
@@ -533,8 +534,8 @@ const sections = [
         completed: false,
         info: `Версии программного обеспечения фиксируются в соответствии с:   
         <ul>
-  			<li><a href=' https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества </a></li>            
-  			<li>Рекомендациями документа <a href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76'>Требования по безопасности информации, устанавливающие уровни доверия к средствам технической защиты информации и средствам обеспечения безопасности информационных технологий” (ФСТЭК России, 2018)</a></li>
+  			<li><a target='_blank' href=' https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества </a></li>            
+  			<li>Рекомендациями документа <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76'>Требования по безопасности информации, устанавливающие уровни доверия к средствам технической защиты информации и средствам обеспечения безопасности информационных технологий” (ФСТЭК России, 2018)</a></li>
          </ul>`,
       },
       {
@@ -545,8 +546,8 @@ const sections = [
         completed: false,
         info: `Хранение версий программного обеспечения осуществляется путем архивирования в соответствии с:   
         <ul>
-  			<li><a href=' https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества </a></li>            
-  			<li>Рекомендациями документа <a href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76'>Требования по безопасности информации, устанавливающие уровни доверия к средствам технической защиты информации и средствам обеспечения безопасности информационных технологий” (ФСТЭК России, 2018)</a></li>
+  			<li><a target='_blank' href=' https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества </a></li>            
+  			<li>Рекомендациями документа <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76'>Требования по безопасности информации, устанавливающие уровни доверия к средствам технической защиты информации и средствам обеспечения безопасности информационных технологий” (ФСТЭК России, 2018)</a></li>
          </ul>`,
       },
       {
@@ -555,7 +556,7 @@ const sections = [
           "Определен порядок снятия копий для поставляемого пользователям программного обеспечения",
         level: 1,
         completed: false,
-        info: `Копии поставляемого программного обеспечения снимаются и фиксируются в соответствии с документом <a href=' https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества </a>`,
+        info: `Копии поставляемого программного обеспечения снимаются и фиксируются в соответствии с документом <a target='_blank' href=' https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества </a>`,
       },
       {
         id: 56,
@@ -566,8 +567,8 @@ const sections = [
         info: `определен метод доставки программного обеспечения (обновлений программного обеспечения включая обновления безопасности) – 1; <br/>
         Метод поставки осуществляется в соответствии с документами: <br/>
         <ul>
-          <li>ГОСТ Р ИСО 9001-2015 “Системы менеджмента качества” <a href='https://docs.cntd.ru/document/1200124394'>https://docs.cntd.ru/document/1200124394</a></li>
-          <li>документом “Требования по безопасности информации устанавливающие уровни доверия к средствам технической защиты информации и средствам обеспечения безопасности информационных технологий” (ФСТЭК России 2018) <a href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76'>https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76</a></li>
+          <li><a target='_blank' href='https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества</a></li>
+          <li>документом  <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76'>Требования по безопасности информации устанавливающие уровни доверия к средствам технической защиты информации и средствам обеспечения безопасности информационных технологий (ФСТЭК России 2018)</a></li>
         </ul>`,
       },
       {
@@ -579,21 +580,21 @@ const sections = [
         info: `организовывается оповещение пользователей о выпуске обновлений (включая обновления безопасности) и необходимости их установки – 1; <br/>
         Оповещение пользователей о выпуске обновлений осуществляется в соответствии с: <br/>
         <ul>
-          <li>ГОСТ Р 56939-2016 “Защита информации. Разработка безопасного программного обеспечения. Общие требования” <a href='https://docs.cntd.ru/document/1200135525'>https://docs.cntd.ru/document/1200135525</a></li>
-          <li>документом “Требования по безопасности информации устанавливающие уровни доверия к средствам технической защиты информации и средствам обеспечения безопасности информационных технологий” (ФСТЭК России 2018) <a href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76'>https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76</a></li>
+          <li><a target='_blank' href='https://docs.cntd.ru/document/1200135525'>ГОСТ Р 56939-2016 Защита информации. Разработка безопасного программного обеспечения. Общие требования </a></li>
+          <li>Документом <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76'>Требования по безопасности информации, устанавливающие уровни доверия к средствам технической защиты информации и средствам обеспечения безопасности информационных технологий (ФСТЭК России, 2018)</a></li>
         </ul>`,
       },
       {
         id: 512,
-        title: "Решение проблем в процессе эксплуатации:",
+        title:
+          "<a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty'> Решение проблем в процессе эксплуатации: </a>",
       },
       {
         id: 58,
         description: "Организована служба технической поддержки",
         level: 1,
         completed: false,
-        info: `организована служба технической поддержки – 1; <br/>
-        Служба технической поддержки организовывается в соответствии с ГОСТ Р ИСО 9001-2015 “Системы менеджмента качества” <a href='https://docs.cntd.ru/document/1200124394'>https://docs.cntd.ru/document/1200124394</a>`,
+        info: `Служба технической поддержки организовывается в соответствии с  <a target='_blank' href='https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества</a>`,
       },
       {
         id: 59,
@@ -601,8 +602,7 @@ const sections = [
           "Разработан регламент реагирования на поступающую информацию об уязвимостях",
         level: 1,
         completed: false,
-        info: `разработан регламент реагирования на поступающую информацию об уязвимостях – 1; <br/>
-        Регламент разрабатывается в соответствии с ГОСТ Р ИСО 9001-2015 “Системы менеджмента качества” <a href='https://docs.cntd.ru/document/1200124394'>https://docs.cntd.ru/document/1200124394</a>`,
+        info: `Регламент разрабатывается в соответствии с <a target='_blank' href='https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества</a>`,
       },
       {
         id: 510,
@@ -610,8 +610,7 @@ const sections = [
           "Организовано обучение специалистов службы технической поддержки работе с поставляемым программным обеспечением, его особенностям установки и функционирования",
         level: 1,
         completed: false,
-        info: `организовано обучение специалистов службы технической поддержки работе с поставляемым программным обеспечением его особенностям установки и функционирования – 1; <br/>
-        Обучение специалистов службы технической поддержки осуществляется в соответствии с ГОСТ Р ИСО 9001-2015 “Системы менеджмента качества” <a href='https://docs.cntd.ru/document/1200124394'>https://docs.cntd.ru/document/1200124394</a>`,
+        info: `Обучение специалистов службы технической поддержки осуществляется в соответствии с <a target='_blank' href='https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества</a>`,
       },
       {
         id: 511,
@@ -619,8 +618,7 @@ const sections = [
           "Организована работа службы технической поддержки в режиме 24/7 с регламентированным временем обработки запросов пользователей",
         level: 3,
         completed: false,
-        info: `организована работа службы технической поддержки в режиме 24/7 с регламентированным временем обработки запросов пользователей – 3; <br/>
-        Служба технической поддержки 24/7 с регламентированным временем работы фиксируется в организационно-распорядительной документации в соответствии с ГОСТ Р ИСО 9001-2015 “Системы менеджмента качества” <a href='https://docs.cntd.ru/document/1200124394'>https://docs.cntd.ru/document/1200124394</a>`,
+        info: `Служба технической поддержки 24/7 с регламентированным временем работы фиксируется в организационно-распорядительной документации в соответствии с <a target='_blank' href='https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества</a>`,
       },
       {
         id: 512,
@@ -628,8 +626,7 @@ const sections = [
           "Установлены метрики оценки качества оказания технической поддержки",
         level: 3,
         completed: false,
-        info: `установлены метрики оценки качества оказания технической поддержки – 3; <br/>
-        Метрики оценки качества фиксируются в организационно-распорядительной документации в соответствии с ГОСТ Р ИСО 9001-2015 “Системы менеджмента качества” <a href='https://docs.cntd.ru/document/1200124394'>https://docs.cntd.ru/document/1200124394</a>`,
+        info: `Метрики оценки качества фиксируются в организационно-распорядительной документации в соответствии с <a target='_blank' href='https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества</a>`,
       },
       {
         id: 513,
@@ -637,8 +634,7 @@ const sections = [
           "Проводится оценка качества оказания технической поддержки с использованием метрик качества",
         level: 3,
         completed: false,
-        info: `проводится оценка качества оказания технической поддержки с использованием метрик качества – 3; <br/>
-        Оценки качества оказания технической поддержки осуществляется командой внутреннего или внешнего аудита в соответствии с ГОСТ Р ИСО 9001-2015 “Системы менеджмента качества” <a href='https://docs.cntd.ru/document/1200124394'>https://docs.cntd.ru/document/1200124394</a>`,
+        info: `Оценки качества оказания технической поддержки осуществляется командой внутреннего или внешнего аудита в соответствии с <a target='_blank' href='https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества </a>`,
       },
       {
         id: 514,
@@ -646,11 +642,10 @@ const sections = [
           "Осуществляется обработка поступающих через службу технической поддержки запросов от пользователей с последующим анализом ошибок функционирования на предмет наличия уязвимостей",
         level: 1,
         completed: false,
-        info: `осуществляется обработка поступающих через службу технической поддержки запросов от пользователей с последующим анализом ошибок функционирования на предмет наличия уязвимостей – 1; <br/>
-        Обработка обращений пользователей осуществляется в соответствии с документами: <br/>
+        info: `Обработка обращений пользователей осуществляется в соответствии с документами: <br/>
         <ul>
-          <li>ГОСТ Р ИСО 9001-2015 “Системы менеджмента качества” <a href='https://docs.cntd.ru/document/1200124394'>https://docs.cntd.ru/document/1200124394</a></li>
-          <li>документом “Требования по безопасности информации устанавливающие уровни доверия к средствам технической защиты информации и средствам обеспечения безопасности информационных технологий” (ФСТЭК России 2018) <a href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76'>https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76</a></li>
+          <li> <a target='_blank' href='https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества </a></li>
+          <li>Документом <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76'>Требования по безопасности информации устанавливающие уровни доверия к средствам технической защиты информации и средствам обеспечения безопасности информационных технологий (ФСТЭК России 2018)</a></li>
         </ul>`,
       },
       {
@@ -659,11 +654,10 @@ const sections = [
           "Осуществляется анализ применимости информации о найденных уязвимостях в программном обеспечении на предмет подтверждения наличия/отсутствия уязвимостей",
         level: 1,
         completed: false,
-        info: `осуществляется анализ применимости информации о найденных уязвимостях в программном обеспечении на предмет подтверждения наличия/отсутствия уязвимостей – 1; <br/>
-        Анализ применимости информации о найденных уязвимостях в программном обеспечении осуществляется в соответствии с документами: <br/>
+        info: `Анализ применимости информации о найденных уязвимостях в программном обеспечении осуществляется в соответствии с документами: <br/>
         <ul>
-          <li>ГОСТ Р ИСО 9001-2015 “Системы менеджмента качества” <a href='https://docs.cntd.ru/document/1200124394'>https://docs.cntd.ru/document/1200124394</a></li>
-          <li>документом “Требования по безопасности информации устанавливающие уровни доверия к средствам технической защиты информации и средствам обеспечения безопасности информационных технологий” (ФСТЭК России 2018) <a href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76'>https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76</a></li>
+          <li><a target='_blank' href='https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества</a></li>
+          <li>Документом <a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-2-iyunya-2020-g-n-76'>Требования по безопасности информации устанавливающие уровни доверия к средствам технической защиты информации и средствам обеспечения безопасности информационных технологий (ФСТЭК России 2018)</a></li>
         </ul>`,
       },
     ],
@@ -679,8 +673,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const headerRow = document.createElement("tr");
     const header = document.createElement("th");
-    const title = document.createTextNode(section.title);
-    header.appendChild(title);
+    header.innerHTML = section.title; // Используем innerHTML для вставки HTML
+
     const actionBtnDiv = document.createElement("div");
     actionBtnDiv.className = "actionBtn";
 
@@ -707,7 +701,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const titleCell = document.createElement("td");
         titleCell.colSpan = 2;
         const titleText = document.createElement("strong");
-        titleText.textContent = task.title;
+        titleText.innerHTML = task.title; // Используем innerHTML для вставки HTML
         titleCell.appendChild(titleText);
         titleRow.appendChild(titleCell);
         tbody.appendChild(titleRow);
@@ -734,7 +728,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const questionSvg = '<img src="./img/question.svg" alt="Подробнее">';
         const closeSvg = '<img src="./img/close.svg" alt="Скрыть">';
         revealBtn.innerHTML = questionSvg;
-        revealBtn.onclick = () => {
+        revealBtn.onclick = (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          event.stopImmediatePropagation();
           const descriptionDiv = document.getElementById("desc-" + task.id);
           descriptionDiv.classList.toggle("open");
           revealBtn.innerHTML = descriptionDiv.classList.contains("open")
