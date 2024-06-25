@@ -1,103 +1,103 @@
-const sections = [
+[
   {
     "id": 1,
-    "title": "<a target='_blank' href='https://disk.yandex.ru/d/oEFXI6_vQz7aBw'>Определение требований</a>",
+    "title": "<a target='_blank' href='https://disk.yandex.ru/d/uOha6CDsw5C8pw'>Определение требований</a>",
     "tasks": [
       {
         "id": 10,
         "description": "Прописан перечень определенных требований по безопасности, предъявляемых к программному обеспечению",
         "level": 1,
         "completed": false,
-        "info": "Требования по безопасности предъявляются в соответствии с классом программного обеспечения и требованиями регуляторов: <br/>         <ul>  <li><a target='_blank' href='https://disk.yandex.ru/d/W2WvUgYbufN92A'>Система обнаружения вторжений</a></li>  <li><a target='_blank' href='https://disk.yandex.ru/d/W2WvUgYbufN92A'>Средство антивирусной защиты</a></li>            <li><a target='_blank' href='https://disk.yandex.ru/d/W2WvUgYbufN92A'>Средство доверенной загрузки</a></li>  <li><a target='_blank' href='https://disk.yandex.ru/d/W2WvUgYbufN92A'>Средство контроля съемных машинных носителей информации</a></li>            <li><a target='_blank' href='https://disk.yandex.ru/d/W2WvUgYbufN92A'>Межсетевой экран</a></li>            <li><a target='_blank' href='https://disk.yandex.ru/d/W2WvUgYbufN92A'>Операционная система типа А</a></li>  <li><a target='_blank' href='https://disk.yandex.ru/d/W2WvUgYbufN92A'>Операционная система типа Б и В</a></li>            <li><a target='_blank' href='https://disk.yandex.ru/d/W2WvUgYbufN92A'>Средство защиты информации от воздействий, направленных на отказ в обслуживании информационных (автоматизированных) систем</a></li>            <li><a target='_blank' href='https://disk.yandex.ru/d/W2WvUgYbufN92A'>Средство контейнеризации</a></li>            <li><a target='_blank' href='https://disk.yandex.ru/d/W2WvUgYbufN92A'>Многофункциональный межсетевой экран уровня сети</a></li>            <li><a target='_blank' href='https://disk.yandex.ru/d/W2WvUgYbufN92A'>Средство виртуализации</a></li>            <li>Прикладное программное обеспечение – <a target='_blank' href='https://disk.yandex.ru/d/W2WvUgYbufN92A'>ГОСТ Р 58833-2020 Защита информации. Идентификация и аутентификация. Общие положения</a> и <a target='_blank' href='https://disk.yandex.ru/d/W2WvUgYbufN92A'>ГОСТ Р 59548-2022 Защита информации. Регистрация событий безопасности. Требования к регистрируемой информации - docs.cntd.ru</a></li>                    </ul>                 "
+        "info": "Требования по безопасности предъявляются в соответствии с классом программного обеспечения и требованиями регуляторов: <br/>         <ul>  <li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-3-fevralya-2012-g '>Система обнаружения вторжений</a></li>  <li><a target='_blank' href='https://disk.yandex.ru/d/0cpVQ0WZkWIMHw'>Средство антивирусной защиты</a></li>            <li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-30-dekabrya-2013-g  '>Средство доверенной загрузки</a></li>  <li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-1-dekabrya-2014-g '>Средство контроля съемных машинных носителей информации</a></li>            <li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-12-sentyabrya-2016-g '>Межсетевой экран</a></li>            <li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-8-fevralya-2017-g '>Операционная система типа А</a></li>  <li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-11-maya-2017-g '>Операционная система типа Б и В</a></li>            <li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-30-iyulya-2018-g-n-132 '>Средство защиты информации от воздействий, направленных на отказ в обслуживании информационных (автоматизированных) систем</a></li>            <li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-4-iyulya-2022-g-n-118 '>Средство контейнеризации</a></li>            <li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-7-marta-2023-g-n-44 '>Многофункциональный межсетевой экран уровня сети</a></li>            <li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/trebovaniya-po-bezopasnosti-informatsii-utverzhdeny-prikazom-fstek-rossii-ot-27-oktyabrya-2022-g-n-187 '>Средство виртуализации</a></li>            <li>Прикладное программное обеспечение – <a target='_blank' href='https://docs.cntd.ru/document/1200172576 '>ГОСТ Р 58833-2020 Защита информации. Идентификация и аутентификация. Общие положения</a> и <a target='_blank' href='https://docs.cntd.ru/document/1200182791 '>ГОСТ Р 59548-2022 Защита информации. Регистрация событий безопасности. Требования к регистрируемой информации - docs.cntd.ru</a></li>                    </ul>                 "
       },
       {
         "id": 11,
         "description": "Перечни прописаны в ТЗ",
         "level": 1,
         "completed": false,
-        "info": "Техническое задание разрабатывается в соответствии с <a target='_blank' href='https://disk.yandex.ru/d/04-mb8Cb4W5Plg'>ГОСТ 19.201-78 Единая система программной документации (ЕСПД). Техническое задание. Требования к содержанию и оформлению</a><br/>"
+        "info": "Техническое задание разрабатывается в соответствии с <a target='_blank' href='https://disk.yandex.ru/d/ROsbnFBffUmnuA'>ГОСТ 19.201-78 Единая система программной документации (ЕСПД). Техническое задание. Требования к содержанию и оформлению</a><br/>"
       },
       {
         "id": 12,
         "description": "В качестве источника формирования требований взяты: требования законов, нормативных правовых актов, отраслевых стандартов, перечень требований пользователя, сценарии применения программного обеспечения",
         "level": 1,
         "completed": false,
-        "info": "В качестве источников формирования требований необходимо придерживаться существующего законодательства:        <ul>  <li><a target='_blank' href='https://disk.yandex.ru/d/zElHNgkvn9sf0Q'>ГОСТ Р 56939-2016 Защита информации. Разработка безопасного программного обеспечения. Общие требования </a></li>  <li><a target='_blank' href='https://disk.yandex.ru/d/zElHNgkvn9sf0Q'>Методические рекомендации ФСТЭК России </a></li>        <li><a target='_blank' href='https://disk.yandex.ru/d/zElHNgkvn9sf0Q'>Методические рекомендации Минцифры России </a></li></ul>"
+        "info": "В качестве источников формирования требований необходимо придерживаться существующего законодательства:        <ul>  <li><a target='_blank' href='https://disk.yandex.ru/d/w5C9TsFsqdKsAw'>ГОСТ Р 56939-2016 Защита информации. Разработка безопасного программного обеспечения. Общие требования </a></li>  <li><a target='_blank' href='https://disk.yandex.ru/d/w5C9TsFsqdKsAw'>Методические рекомендации ФСТЭК России </a></li>        <li><a target='_blank' href='https://disk.yandex.ru/d/w5C9TsFsqdKsAw'>Методические рекомендации Минцифры России </a></li></ul>"
       },
       {
         "id": 13,
         "description": "Соблюдена однозначность трактования требований, определяющих свойства безопасности программного обеспечения",
         "level": 2,
         "completed": false,
-        "info": "Данную меру необходимо выполнять в соответствии со стандартом <a target='_blank' href='https://disk.yandex.ru/d/4sjtJQtHj-yWvQ '>ЕЕЕ-830-1998 Recommended Practice for Software Requirements Specifications</a><br/> Переведенный стандарт <a target='_blank' href='https://disk.yandex.ru/d/4sjtJQtHj-yWvQ'>Рекомендации IEEE по разработке требований к программному обеспечению</a>"
+        "info": "Данную меру необходимо выполнять в соответствии со стандартом <a target='_blank' href='https://standards.ieee.org/ieee/830/1222/ '>ЕЕЕ-830-1998 Recommended Practice for Software Requirements Specifications</a><br/> Переведенный стандарт <a target='_blank' href='https://github.com/maxvipon/IEEE-Std-830-1998-RU/blob/master/IEEE%20STD%20830-1998%20(RU).md'>Рекомендации IEEE по разработке требований к программному обеспечению</a>"
       },
       {
         "id": 14,
         "description": "Соблюдена взаимная непротиворечивость набора требований, определяющих свойства безопасности программного обеспечения",
         "level": 2,
         "completed": false,
-        "info": "Данную меру необходимо выполнять в соответствии со стандартом <a target='_blank' href='https://disk.yandex.ru/d/nifuhvPt6NR14A '>ЕЕЕ-830-1998 Recommended Practice for Software Requirements Specifications</a><br/> Переведенный стандарт <a target='_blank' href='https://disk.yandex.ru/d/nifuhvPt6NR14A  '>Рекомендации IEEE по разработке требований к программному обеспечению</a>"
+        "info": "Данную меру необходимо выполнять в соответствии со стандартом <a target='_blank' href='https://standards.ieee.org/ieee/830/1222/ '>ЕЕЕ-830-1998 Recommended Practice for Software Requirements Specifications</a><br/> Переведенный стандарт <a target='_blank' href='https://github.com/maxvipon/IEEE-Std-830-1998-RU/blob/master/IEEE%20STD%20830-1998%20(RU).md  '>Рекомендации IEEE по разработке требований к программному обеспечению</a>"
       },
       {
         "id": 15,
         "description": "Соблюдена адекватность требований, определяющих свойства безопасности программного обеспечения",
         "level": 2,
         "completed": false,
-        "info": "Данную меру необходимо выполнять в соответствии со стандартом <a target='_blank' href='https://disk.yandex.ru/d/G0JAq0BZW8-7nA '>ЕЕЕ-830-1998 Recommended Practice for Software Requirements Specifications</a><br/> Переведенный стандарт <a target='_blank' href='https://disk.yandex.ru/d/G0JAq0BZW8-7nA'>Рекомендации IEEE по разработке требований к программному обеспечению</a>"
+        "info": "Данную меру необходимо выполнять в соответствии со стандартом <a target='_blank' href='https://standards.ieee.org/ieee/830/1222/ '>ЕЕЕ-830-1998 Recommended Practice for Software Requirements Specifications</a><br/> Переведенный стандарт <a target='_blank' href='https://github.com/maxvipon/IEEE-Std-830-1998-RU/blob/master/IEEE%20STD%20830-1998%20(RU).md'>Рекомендации IEEE по разработке требований к программному обеспечению</a>"
       },
       {
         "id": 16,
         "description": "Соблюдена полнота требований, определяющих свойства безопасности программного обеспечения",
         "level": 2,
         "completed": false,
-        "info": "Данную меру необходимо выполнять в соответствии со стандартом <a target='_blank' href='https://disk.yandex.ru/d/P62yi3zkK9K4fQ '>ЕЕЕ-830-1998 Recommended Practice for Software Requirements Specifications</a><br/> Переведенный стандарт <a target='_blank' href='https://disk.yandex.ru/d/P62yi3zkK9K4fQ'>Рекомендации IEEE по разработке требований к программному обеспечению </a>"
+        "info": "Данную меру необходимо выполнять в соответствии со стандартом <a target='_blank' href='https://standards.ieee.org/ieee/830/1222/ '>ЕЕЕ-830-1998 Recommended Practice for Software Requirements Specifications</a><br/> Переведенный стандарт <a target='_blank' href='https://github.com/maxvipon/IEEE-Std-830-1998-RU/blob/master/IEEE%20STD%20830-1998%20(RU).md'>Рекомендации IEEE по разработке требований к программному обеспечению </a>"
       }
     ]
   },
   {
     "id": 2,
-    "title": "<a target='_blank' href='https://disk.yandex.ru/d/6QsRl2RXv8ZO3g'>Проектирование архитектуры программного обеспечения</a>",
+    "title": "<a target='_blank' href='https://disk.yandex.ru/d/LzrNZkOjh94dLQ'>Проектирование архитектуры программного обеспечения</a>",
     "tasks": [
       {
         "id": 20,
         "description": "Подготовлен проект архитектуры программного обеспечения с уровнем детализации, достаточным для понимания структуры программного обеспечения другими участниками разработки программного обеспечения",
         "level": 3,
         "completed": false,
-        "info": "Проект архитектуры программы должен быть представлен в описании программы в соответствии с <a target='_blank' href='https://disk.yandex.ru/d/vFmHHLudbSRCGg '>ГОСТ 19.402-78 Единая система программной документации (ЕСПД). Описание программы </a> и пояснительной записке в соответствии с <a target='_blank' href='https://disk.yandex.ru/d/vFmHHLudbSRCGg  '>ГОСТ 19.404-79 Единая система программной документации (ЕСПД). Пояснительная записка. Требования к содержанию и оформлению</a>"
+        "info": "Проект архитектуры программы должен быть представлен в описании программы в соответствии с <a target='_blank' href='https://docs.cntd.ru/document/1200007652 '>ГОСТ 19.402-78 Единая система программной документации (ЕСПД). Описание программы </a> и пояснительной записке в соответствии с <a target='_blank' href='https://docs.cntd.ru/document/1200007671  '>ГОСТ 19.404-79 Единая система программной документации (ЕСПД). Пояснительная записка. Требования к содержанию и оформлению</a>"
       },
       {
         "id": 21,
         "description": "Разработана модель угроз программного обеспечения",
         "level": 1,
         "completed": false,
-        "info": "Для разработки модели угроз необходимо использовать следующие источники:           <ul>  <li><a target='_blank' href='https://disk.yandex.ru/d/2oueDOGSR1jLlQ '>ГОСТ Р 58412-2019 Защита информации. Разработка безопасного программного обеспечения. Угрозы безопасности информации при разработке программного обеспечения</a></li>  <li><a target='_blank' href='https://disk.yandex.ru/d/2oueDOGSR1jLlQ '>STRIDE и Threat Modeling Tool</a> от Microsoft </li>            <li>Инструмент <a target='_blank' href=' https://disk.yandex.ru/d/2oueDOGSR1jLlQ'>Матрица угроз ATT&CK для CI/CD </a></li>            <li><a target='_blank' href='https://disk.yandex.ru/d/2oueDOGSR1jLlQ'>Materialize Threats Tools </a></li>            <li><a target='_blank' href='https://disk.yandex.ru/d/2oueDOGSR1jLlQ'>threatspec </a></li>            <li><a target='_blank' href='https://disk.yandex.ru/d/2oueDOGSR1jLlQ'>The Raindance Project </a></li>            <li><a target='_blank' href='https://disk.yandex.ru/d/2oueDOGSR1jLlQ'>PyTM </a></li>            <li><a target='_blank' href='https://disk.yandex.ru/d/2oueDOGSR1jLlQ '>Meta Attack Language </a></li>            <li><a target='_blank' href='https://disk.yandex.ru/d/2oueDOGSR1jLlQ'>Agile Threat Modeling Toolkit </a></li></ul>"
+        "info": "Для разработки модели угроз необходимо использовать следующие источники:           <ul>  <li><a target='_blank' href='https://docs.cntd.ru/document/1200164529 '>ГОСТ Р 58412-2019 Защита информации. Разработка безопасного программного обеспечения. Угрозы безопасности информации при разработке программного обеспечения</a></li>  <li><a target='_blank' href='https://www.microsoft.com/en-us/securityengineering/sdl/threatmodeling '>STRIDE и Threat Modeling Tool</a> от Microsoft </li>            <li>Инструмент <a target='_blank' href=' https://github.com/rung/threat-matrix-cicd'>Матрица угроз ATT&CK для CI/CD </a></li>            <li><a target='_blank' href='https://github.com/secmerc/materialize-threats'>Materialize Threats Tools </a></li>            <li><a target='_blank' href='https://github.com/threatspec/threatspec'>threatspec </a></li>            <li><a target='_blank' href='https://github.com/devsecops/raindance'>The Raindance Project </a></li>            <li><a target='_blank' href='https://github.com/izar/pytm'>PyTM </a></li>            <li><a target='_blank' href='https://mal-lang.org/ '>Meta Attack Language </a></li>            <li><a target='_blank' href='https://github.com/Threagile/threagile'>Agile Threat Modeling Toolkit </a></li></ul>"
       },
       {
         "id": 22,
         "description": "По результатам моделирования угроз и анализа поверхности атаки приоритизированы и устранены потенциальные уязвимости (угрозы безопасности) с учетом их критичности",
         "level": 1,
         "completed": false,
-        "info": "Критичность угроз определяется в соответствии с <a target='_blank' href='https://disk.yandex.ru/d/GykYzydQIze3fA'>Банком данных угроз безопасности информации ФСТЭК России </a>"
+        "info": "Критичность угроз определяется в соответствии с <a target='_blank' href='https://bdu.fstec.ru/threat '>Банком данных угроз безопасности информации ФСТЭК России </a>"
       },
       {
         "id": 23,
         "description": "Разработан и применен в разработке программного обеспечения регламент устранения потенциальных уязвимостей",
         "level": 1,
         "completed": false,
-        "info": "Регламент разрабатывается в соответствии с <a target='_blank' href='  https://disk.yandex.ru/d/i6coWewUwLBttQ'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества. Требования</a>"
+        "info": "Регламент разрабатывается в соответствии с <a target='_blank' href='  https://docs.cntd.ru/document/1200124394'>ГОСТ Р ИСО 9001-2015 Системы менеджмента качества. Требования</a>"
       },
       {
         "id": 24,
         "description": "Выполнено описание поверхности атаки",
         "level": 1,
         "completed": false,
-        "info": "Необходимо для определения всех возможных точек входа, через которые злоумышленники могут попытаться проникнуть в систему <br/> Поверхность атаки выявляется с помощью инструмента для определения поверхности атаки <a target='_blank' href='  https://disk.yandex.ru/d/UU9GseAmG5_ZXQ '>Natch</a> от ИСП РАН <br/>        Описание поверхности атаки составляется в соответствии с рекомендациями документа <a target='_blank' href='  https://disk.yandex.ru/d/UU9GseAmG5_ZXQ'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020)</a>"
+        "info": "Необходимо для определения всех возможных точек входа, через которые злоумышленники могут попытаться проникнуть в систему <br/> Поверхность атаки выявляется с помощью инструмента для определения поверхности атаки <a target='_blank' href='  https://www.ispras.ru/technologies/natch/ '>Natch</a> от ИСП РАН <br/>        Описание поверхности атаки составляется в соответствии с рекомендациями документа <a target='_blank' href='  https://fstec.ru/dokumenty/vse-dokumenty/informatsionnye-i-analiticheskie-materialy/informatsionnoe-soobshchenie-fstek-rossii-ot-10-fevralya-2021-g-n-240-24-647'>Методика выявления уязвимостей и недекларированных возможностей в программном обеспечении (ФСТЭК России, 2020)</a>"
       }
     ]
   },
   {
     "id": 3,
-    "title": "<a target='_blank' href='https://disk.yandex.ru/d/Io_3cswSh-7G1w'>Разработка программного обеспечения</a>",
+    "title": "<a target='_blank' href='https://disk.yandex.ru/d/vCB-UCG3LGLfAg'>Разработка программного обеспечения</a>",
     "tasks": [
       {
         "id": 311,
@@ -293,7 +293,7 @@ const sections = [
   },
   {
     "id": 4,
-    "title": "<a target='_blank' href='https://disk.yandex.ru/d/i9flLDtJux5TBw'>Тестирование</a>",
+    "title": "<a target='_blank' href='https://disk.yandex.ru/d/HSorW-DzAZtCTA'>Тестирование</a>",
     "tasks": [
       {
         "id": 40,
@@ -362,7 +362,7 @@ const sections = [
   },
   {
     "id": 5,
-    "title": "<a target='_blank' href='https://disk.yandex.ru/d/zKLfkr0rrOUlFQ'>Внедрение и сопровождение</a>",
+    "title": "<a target='_blank' href='https://disk.yandex.ru/d/hQySykWjnPU-1g'>Внедрение и сопровождение</a>",
     "tasks": [
       {
         "id": 511,
@@ -480,303 +480,3 @@ const sections = [
     ]
   }
 ]
-
-document.addEventListener("DOMContentLoaded", function () {
-  const taskTable = document.getElementById("taskTable");
-  sections.forEach((section) => {
-    const table = document.createElement("table");
-    const thead = document.createElement("thead");
-    const tbody = document.createElement("tbody");
-
-    const headerRow = document.createElement("tr");
-    const header = document.createElement("th");
-    header.innerHTML = section.title; // Используем innerHTML для вставки HTML
-
-    const actionBtnDiv = document.createElement("div");
-    actionBtnDiv.className = "actionBtn";
-
-    const baseButton = document.createElement("button");
-    baseButton.textContent = "Выделить все";
-    baseButton.classList.add("buttonBase");
-    baseButton.onclick = () => {
-      section.tasks.forEach((task) => {
-        if (task.description) {
-          task.completed = !task.completed;
-          updateTaskUI(task.id, task.completed);
-        }
-      });
-    };
-
-    actionBtnDiv.appendChild(baseButton);
-    header.appendChild(actionBtnDiv);
-    headerRow.appendChild(header);
-    thead.appendChild(headerRow);
-
-    section.tasks.forEach((task) => {
-      if (task.title) {
-        const titleRow = document.createElement("tr");
-        const titleCell = document.createElement("td");
-        titleCell.colSpan = 2;
-        const titleText = document.createElement("strong");
-        titleText.innerHTML = task.title; // Используем innerHTML для вставки HTML
-        titleCell.appendChild(titleText);
-        titleRow.appendChild(titleCell);
-        tbody.appendChild(titleRow);
-      } else if (task.description) {
-        const row = document.createElement("tr");
-        const cell = document.createElement("td");
-        const label = document.createElement("label");
-        const checkbox = document.createElement("input");
-        const level = document.createElement("div");
-        const action = document.createElement("div");
-        action.classList.add("actionRow");
-        level.classList.add("level");
-        level.classList.add(`level-${task.level}`);
-        level.innerHTML = task.level;
-        checkbox.type = "checkbox";
-        checkbox.checked = task.completed;
-        checkbox.id = "task-" + task.id;
-        checkbox.onchange = () => {
-          task.completed = checkbox.checked;
-        };
-
-        const revealBtn = document.createElement("span");
-        revealBtn.className = "reveal-btn";
-        const questionSvg = '<img src="./img/question.svg" alt="Подробнее">';
-        const closeSvg = '<img src="./img/close.svg" alt="Скрыть">';
-        revealBtn.innerHTML = questionSvg;
-        revealBtn.onclick = (event) => {
-          event.preventDefault();
-          event.stopPropagation();
-          event.stopImmediatePropagation();
-          const descriptionDiv = document.getElementById("desc-" + task.id);
-          descriptionDiv.classList.toggle("open");
-          revealBtn.innerHTML = descriptionDiv.classList.contains("open")
-            ? closeSvg
-            : questionSvg;
-        };
-
-        const descriptionDiv = document.createElement("div");
-        descriptionDiv.className = "description";
-        descriptionDiv.id = "desc-" + task.id;
-        descriptionDiv.innerHTML = task.info;
-
-        label.appendChild(document.createTextNode(task.description));
-        action.appendChild(level);
-        action.appendChild(checkbox);
-        action.appendChild(revealBtn);
-        label.appendChild(action);
-        cell.appendChild(label);
-        cell.appendChild(descriptionDiv);
-        row.appendChild(cell);
-        tbody.appendChild(row);
-      }
-    });
-
-    table.appendChild(thead);
-    table.appendChild(tbody);
-
-    taskTable.appendChild(table);
-  });
-
-  function updateTaskUI(taskId, completed) {
-    const checkbox = document.getElementById("task-" + taskId);
-    if (checkbox) {
-      checkbox.checked = completed;
-    }
-  }
-});
-
-const resultsDiv = document.getElementById("results");
-const closeResultsBtn = document.querySelector("#closeResultsBtn");
-
-document.addEventListener("DOMContentLoaded", function () {
-  const showResultsBtn = document.getElementById("showResultsBtn");
-  const showInfoBtn = document.getElementById("showInfoBtn");
-  const downloadResultsBtn = document.getElementById("downloadResultsBtn");
-  const infoDiv = document.getElementById("info");
-
-  showResultsBtn.addEventListener("click", function () {
-    resultsDiv.innerHTML = "";
-    let allLevel1Completed = true;
-    let allLevel2Completed = true;
-    let allLevel3Completed = true;
-
-    let completedTasks = 0;
-    let totalTasks = 0;
-    let level1Completed = 0;
-    let level1Total = 0;
-    let level2Completed = 0;
-    let level2Total = 0;
-    let level3Completed = 0;
-    let level3Total = 0;
-
-    sections.forEach((section) => {
-      section.tasks.forEach((task) => {
-        if (task.description) {
-          totalTasks++;
-          if (task.completed) {
-            completedTasks++;
-          }
-          if (task.level === 1) {
-            level1Total++;
-            if (task.completed) {
-              level1Completed++;
-            }
-          }
-          if (task.level === 2) {
-            level2Total++;
-            if (task.completed) {
-              level2Completed++;
-            }
-          }
-          if (task.level === 3) {
-            level3Total++;
-            if (task.completed) {
-              level3Completed++;
-            }
-          }
-        }
-      });
-    });
-
-    if (level1Completed < level1Total) {
-      allLevel1Completed = false;
-    }
-    if (level2Completed < level2Total) {
-      allLevel2Completed = false;
-    }
-    if (level3Completed < level3Total) {
-      allLevel3Completed = false;
-    }
-
-    let securityLevel = "";
-
-    if (!allLevel1Completed) {
-      securityLevel =
-        "Процессы безопасной разработки не выстроены, программное обеспечение небезопасно";
-    } else if (allLevel1Completed && !allLevel2Completed) {
-      securityLevel = "Программное обеспечение безопасно на 1 уровне";
-    } else if (
-      allLevel1Completed &&
-      allLevel2Completed &&
-      !allLevel3Completed
-    ) {
-      securityLevel = "Программное обеспечение безопасно на 2 уровне";
-    } else if (allLevel1Completed && allLevel2Completed && allLevel3Completed) {
-      securityLevel = "Программное обеспечение безопасно на 3 уровне";
-    }
-
-    const result = document.createElement("div");
-    result.innerHTML = `
-        <p>${securityLevel}</p>
-        <p>Всего мер выполнено: ${completedTasks} из ${totalTasks}</p>
-        <p>Уровень 1: ${level1Completed} из ${level1Total}</p>
-        <p>Уровень 2: ${level2Completed} из ${level2Total}</p>
-        <p>Уровень 3: ${level3Completed} из ${level3Total}</p>
-    `;
-    resultsDiv.appendChild(result);
-
-    // resultsDiv.style.display = "block";
-    resultsDiv.classList.toggle("displaySec");
-    closeResultsBtn.classList.toggle("displaySec");
-    downloadResultsBtn.style.display = "block";
-
-    // showInfoBtn.style.display = "block";
-    showInfoBtn.classList.toggle("displaySec");
-  });
-
-  showInfoBtn.addEventListener("click", function () {
-    if (infoDiv) infoDiv.innerHTML = "";
-    sections.forEach((section) => {
-      const completedTasks = section.tasks.filter(
-        (task) => task.completed && task.description
-      ).length;
-      const totalTasks = section.tasks.filter(
-        (task) => task.description
-      ).length;
-      const sectionInfo = document.createElement("div");
-      sectionInfo.innerHTML = `${section.title}: ${completedTasks} из ${totalTasks} мер выполнены`;
-
-      const level1Completed = section.tasks.filter(
-        (task) => task.completed && task.level === 1
-      ).length;
-      const level1Total = section.tasks.filter(
-        (task) => task.level === 1
-      ).length;
-      const level2Completed = section.tasks.filter(
-        (task) => task.completed && task.level === 2
-      ).length;
-      const level2Total = section.tasks.filter(
-        (task) => task.level === 2
-      ).length;
-      const level3Completed = section.tasks.filter(
-        (task) => task.completed && task.level === 3
-      ).length;
-      const level3Total = section.tasks.filter(
-        (task) => task.level === 3
-      ).length;
-
-      const levelsInfo = document.createElement("div");
-      levelsInfo.innerHTML = `
-            Уровень 1: ${level1Completed} из ${level1Total}<br>
-            Уровень 2: ${level2Completed} из ${level2Total}<br>
-            Уровень 3: ${level3Completed} из ${level3Total}
-        `;
-
-      sectionInfo.appendChild(levelsInfo);
-      infoDiv.appendChild(sectionInfo);
-    });
-    infoDiv.classList.toggle("displaySec");
-  });
-  document
-    .getElementById("downloadResultsBtn")
-    .addEventListener("click", function () {
-      let csvContent = "data:text/csv;charset=utf-8,\uFEFF";
-      sections.forEach((section) => {
-        let sectionTitle = section.title
-          .replace(/<[^>]+>/g, "")
-          .replace(/"/g, '""');
-        csvContent += `"${sectionTitle}"\n`;
-
-        section.tasks.forEach((task) => {
-          let taskContent;
-          if (task.title) {
-            taskContent = task.title
-              .replace(/<[^>]+>/g, "")
-              .replace(/"/g, '""');
-          } else {
-            let taskDescription = task.description
-              .replace(/<[^>]+>/g, "")
-              .replace(/"/g, '""');
-            let taskStatus = task.completed ? "Выполнено" : "Не выполнено";
-            taskContent = `"${taskDescription}";"${taskStatus}"`;
-          }
-          csvContent += `${taskContent}\n`;
-        });
-        csvContent += "\n";
-      });
-
-      const results = document
-        .getElementById("results")
-        .innerText.replace(/<[^>]+>/g, "")
-        .replace(/\n/g, " ")
-        .replace(/"/g, '""');
-      csvContent += `"Результаты"\n"${results}"\n`;
-
-      const encodedUri = encodeURI(csvContent);
-      const link = document.createElement("a");
-      link.setAttribute("href", encodedUri);
-      link.setAttribute("download", "tasks_report.csv");
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    });
-
-  closeResultsBtn?.addEventListener("click", function () {
-    infoDiv.classList.remove("displaySec");
-    resultsDiv.classList.remove("displaySec");
-    showInfoBtn.classList.toggle("displaySec");
-    closeResultsBtn.classList.remove("displaySec");
-  });
-});
