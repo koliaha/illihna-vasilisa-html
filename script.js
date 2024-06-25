@@ -2,7 +2,7 @@ const sections = [
   {
     id: 1,
     title:
-      "<a target='_blank' href='https://disk.yandex.ru/client/disk/Безопасность%20программного%20обеспечения/Определение%20требований'>Определение требований</a>",
+      "<a target='_blank' href='https://disk.yandex.ru/d/uOha6CDsw5C8pw'>Определение требований</a>",
 
     tasks: [
       {
@@ -14,7 +14,7 @@ const sections = [
         info: `Требования по безопасности предъявляются в соответствии с классом программного обеспечения и требованиями регуляторов: <br/> 
         <ul>
   			<li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-3-fevralya-2012-g '>Система обнаружения вторжений</a></li>
-  			<li><a target='_blank' href='https://disk.yandex.ru/client/disk/Оценка%20уровня%20безопасности%20программного%20обеспечения/Нормативные%20правовые%20акты/Средство%20антивирусной%20защиты '>Средство антивирусной защиты</a></li>
+  			<li><a target='_blank' href='https://disk.yandex.ru/d/0cpVQ0WZkWIMHw'>Средство антивирусной защиты</a></li>
             <li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-30-dekabrya-2013-g  '>Средство доверенной загрузки</a></li>
   			<li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-1-dekabrya-2014-g '>Средство контроля съемных машинных носителей информации</a></li>
             <li><a target='_blank' href='https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-12-sentyabrya-2016-g '>Межсетевой экран</a></li>
@@ -33,7 +33,7 @@ const sections = [
         description: "Перечни прописаны в ТЗ",
         level: 1,
         completed: false,
-        info: `Техническое задание разрабатывается в соответствии с <a target='_blank' href='https://disk.yandex.ru/client/disk/Безопасность%20программного%20обеспечения/Определение%20требований/Перечни%20прописаны%20в%20ТЗ'>ГОСТ 19.201-78 Единая система программной документации (ЕСПД). Техническое задание. Требования к содержанию и оформлению</a><br/>`,
+        info: `Техническое задание разрабатывается в соответствии с <a target='_blank' href='https://disk.yandex.ru/i/NWkKAym2OUhN5g'>ГОСТ 19.201-78 Единая система программной документации (ЕСПД). Техническое задание. Требования к содержанию и оформлению</a><br/>`,
       },
       {
         id: 12,
@@ -85,7 +85,7 @@ const sections = [
   {
     id: 2,
     title:
-      "<a target='_blank' href='https://docs.cntd.ru/document/1200164529 '>Проектирование архитектуры программного обеспечения</a>",
+      "<a target='_blank' href='https://disk.yandex.ru/d/LzrNZkOjh94dLQ'>Проектирование архитектуры программного обеспечения</a>",
 
     tasks: [
       {
@@ -142,7 +142,7 @@ const sections = [
   },
   {
     id: 3,
-    title: "Разработка программного обеспечения",
+    title: "<a target='_blank' href='https://disk.yandex.ru/d/vCB-UCG3LGLfAg'>Разработка программного обеспечения</a>",
     tasks: [
       {
         id: 311,
@@ -394,7 +394,7 @@ const sections = [
   },
   {
     id: 4,
-    title: "Тестирование",
+    title: "<a target='_blank' href='https://disk.yandex.ru/d/HSorW-DzAZtCTA'>Тестирование</a>",
 
     tasks: [
       {
@@ -501,7 +501,7 @@ const sections = [
   },
   {
     id: 5,
-    title: "Внедрение и сопровождение",
+    title: "<a target='_blank' href='https://disk.yandex.ru/d/hQySykWjnPU-1g'>Внедрение и сопровождение</a>",
     tasks: [
       {
         id: 511,
