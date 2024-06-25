@@ -74,6 +74,9 @@ th {
   justify-content: space-between;
   align-items: center;
 }
+th a{
+  color: #000;
+}
 th button {
   margin: 0;
 }
