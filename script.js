@@ -1,7 +1,8 @@
 const sections = [
   {
     id: 1,
-    title: "Определение требований",
+    title:
+      "<a target='_blank' href='https://disk.yandex.ru/client/disk/Безопасность%20программного%20обеспечения/Определение%20требований'>Определение требований</a>",
 
     tasks: [
       {
@@ -32,7 +33,7 @@ const sections = [
         description: "Перечни прописаны в ТЗ",
         level: 1,
         completed: false,
-        info: `Техническое задание разрабатывается в соответствии с <a target='_blank' href='https://disk.yandex.ru/i/VtrBGyPDW3N1xw'>ГОСТ 19.201-78 Единая система программной документации (ЕСПД). Техническое задание. Требования к содержанию и оформлению</a><br/> В техническом задании указываются требования по безопасности в соответствии с определенным классом программного обеспечения`,
+        info: `Техническое задание разрабатывается в соответствии с <a target='_blank' href='https://disk.yandex.ru/client/disk/Безопасность%20программного%20обеспечения/Определение%20требований/Перечни%20прописаны%20в%20ТЗ'>ГОСТ 19.201-78 Единая система программной документации (ЕСПД). Техническое задание. Требования к содержанию и оформлению</a><br/>`,
       },
       {
         id: 12,
@@ -837,7 +838,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!allLevel1Completed) {
       securityLevel =
-        "Процессы безопасной разработки не выстроены, программное обеспечение не безопасно";
+        "Процессы безопасной разработки не выстроены, программное обеспечение небезопасно";
     } else if (allLevel1Completed && !allLevel2Completed) {
       securityLevel = "Программное обеспечение безопасно на 1 уровне";
     } else if (
@@ -879,7 +880,7 @@ document.addEventListener("DOMContentLoaded", function () {
         (task) => task.description
       ).length;
       const sectionInfo = document.createElement("div");
-      sectionInfo.textContent = `${section.title}: ${completedTasks} из ${totalTasks} мер выполнены`;
+      sectionInfo.innerHTML = `${section.title}: ${completedTasks} из ${totalTasks} мер выполнены`;
 
       const level1Completed = section.tasks.filter(
         (task) => task.completed && task.level === 1
@@ -917,22 +918,35 @@ document.addEventListener("DOMContentLoaded", function () {
     .addEventListener("click", function () {
       let csvContent = "data:text/csv;charset=utf-8,\uFEFF";
       sections.forEach((section) => {
-        csvContent += `"${section.title}"\n`;
+        let sectionTitle = section.title
+          .replace(/<[^>]+>/g, "")
+          .replace(/"/g, '""');
+        csvContent += `"${sectionTitle}"\n`;
+
         section.tasks.forEach((task) => {
+          let taskContent;
           if (task.title) {
-            csvContent += `"${task.title}"\n`;
+            taskContent = task.title
+              .replace(/<[^>]+>/g, "")
+              .replace(/"/g, '""');
           } else {
-            csvContent += `"${task.description}";"${
-              task.completed ? "Выполнено" : "Не выполнено"
-            }"\n`;
+            let taskDescription = task.description
+              .replace(/<[^>]+>/g, "")
+              .replace(/"/g, '""');
+            let taskStatus = task.completed ? "Выполнено" : "Не выполнено";
+            taskContent = `"${taskDescription}";"${taskStatus}"`;
           }
+          csvContent += `${taskContent}\n`;
         });
         csvContent += "\n";
       });
-      const results = document.getElementById("results").innerText;
-      csvContent += `"Результаты"\n"${results
+
+      const results = document
+        .getElementById("results")
+        .innerText.replace(/<[^>]+>/g, "")
         .replace(/\n/g, " ")
-        .replace(/"/g, '""')}"\n`;
+        .replace(/"/g, '""');
+      csvContent += `"Результаты"\n"${results}"\n`;
 
       const encodedUri = encodeURI(csvContent);
       const link = document.createElement("a");
@@ -942,6 +956,7 @@ document.addEventListener("DOMContentLoaded", function () {
       link.click();
       document.body.removeChild(link);
     });
+
   closeResultsBtn?.addEventListener("click", function () {
     infoDiv.classList.remove("displaySec");
     resultsDiv.classList.remove("displaySec");

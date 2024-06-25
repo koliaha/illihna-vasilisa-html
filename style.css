@@ -170,7 +170,7 @@ button:hover {
   text-align: center;
   font-size: 14px;
   line-height: 20px;
-  background-color: #2980b9;
+  background-color: #555;
 }
 .level-1 {
   background-color: #db5151;
@@ -209,8 +209,8 @@ button:hover {
   max-height: 700px;
   margin-top: 10px;
   padding: 10px;
-  background-color: #f1f0ec;
-  border-left: 4px solid #ffcf11;
+  background-color: #f4fbfb;
+  border-left: 4px solid #D5F1F1;
 }
 
 .reveal-btn {
@@ -239,7 +239,7 @@ button:hover {
   background-color: rgb(0, 186, 12);
 }
 #showInfoBtn {
-  background-color: rgb(255, 200, 71);
+  background-color: rgb(248, 202, 93);
   display: none;
 }
 .displaySec {
