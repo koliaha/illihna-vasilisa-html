@@ -483,7 +483,11 @@ const sections = [
 
 document.addEventListener("DOMContentLoaded", function () {
   const taskTable = document.getElementById("taskTable");
+  
   sections.forEach((section) => {
+    // Sort tasks by level
+    section.tasks.sort((a, b) => a.level - b.level);
+
     const table = document.createElement("table");
     const thead = document.createElement("thead");
     const tbody = document.createElement("tbody");
